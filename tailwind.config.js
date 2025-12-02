@@ -1,4 +1,4 @@
-const baseConfig = require('config/tailwind.config');
+const baseConfig = require('./tailwind.config.ts');
 
 const trackstackColors = {
   midnight: "#141B22",

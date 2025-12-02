@@ -6,6 +6,7 @@ import Image from "next/image";
 import Container from "./Container";
 import ProductsMegaMenu from "./ProductsMegaMenu";
 import HamburgerIcon from "./HamburgerIcon";
+import ActiveLink from "./ActiveLink";
 import { products as productData } from "../data/products";
 import {
   products,
@@ -452,101 +453,119 @@ const MobileNav: React.FC = () => {
           </div>
 
           {/* Navigation Links */}
-          <nav className="flex-1 overflow-y-auto px-[24px] transition-[padding-top] duration-300 ease-in-out" style={{ paddingTop: productsOpen ? '20px' : '164px' }}>
+          <nav className="flex-1 overflow-y-auto px-[24px] transition-[padding-top] duration-300 ease-in-out" style={{ paddingTop: productsOpen ? '20px' : '0px' }}>
             <div className="space-y-1">
-              {/* Products Dropdown */}
-              <MobileDropdown
-                label="Products"
-                isMobile={true}
-                id="mobile-products"
-                onOpenChange={setProductsOpen}
-                onCloseMenu={closeMenu}
-              />
+              <ActiveLink
+                href="/"
+                onClick={closeMenu}
+                className="block pb-2 px-3 text-[#0D1117] hover:bg-gray-50 rounded-md"
+                activeClassName="bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white hover:from-[#667eea] hover:to-[#764ba2]"
+                style={{
+                  fontFamily: "'Next Pan Book', sans-serif",
+                  fontWeight: 500,
+                  fontSize: '20px',
+                  lineHeight: '56px',
+                  letterSpacing: '0%'
+                }}
+              >
+                Home
+              </ActiveLink>
 
-              {/* Hide other links when Products is open */}
-              {!productsOpen && (
-                <>
-                  {/* Pricing */}
-                  {/* <Link
-                    href="/pricing"
-                    onClick={closeMenu}
-                    className="block py-2 px-3 text-[#0D1117] hover:bg-gray-50 rounded-md"
-                    style={{
-                      fontFamily: "'Next Pan Book', sans-serif",
-                      fontWeight: 500,
-                      fontSize: '48px',
-                      lineHeight: '56px',
-                      letterSpacing: '0%'
-                    }}
-                  >
-                    Pricing
-                  </Link>
+              <ActiveLink
+                href="/services"
+                onClick={closeMenu}
+                className="block pb-2 px-3 text-[#0D1117] hover:bg-gray-50 rounded-md"
+                activeClassName="bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white hover:from-[#667eea] hover:to-[#764ba2]"
+                style={{
+                  fontFamily: "'Next Pan Book', sans-serif",
+                  fontWeight: 500,
+                  fontSize: '20px',
+                  lineHeight: '56px',
+                  letterSpacing: '0%'
+                }}
+              >
+                Our Services
+              </ActiveLink>
 
-                  {/* Blog */}
-                  <Link
-                    href="/blog"
-                    onClick={closeMenu}
-                    className="block py-2 px-3 text-[#0D1117] hover:bg-gray-50 rounded-md"
-                    style={{
-                      fontFamily: "'Next Pan Book', sans-serif",
-                      fontWeight: 500,
-                      fontSize: '48px',
-                      lineHeight: '56px',
-                      letterSpacing: '0%'
-                    }}
-                  >
-                    Blog
-                  </Link>
+              <ActiveLink
+                href="/projects"
+                onClick={closeMenu}
+                className="block pb-2 px-3 text-[#0D1117] hover:bg-gray-50 rounded-md"
+                activeClassName="bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white hover:from-[#667eea] hover:to-[#764ba2]"
+                style={{
+                  fontFamily: "'Next Pan Book', sans-serif",
+                  fontWeight: 500,
+                  fontSize: '20px',
+                  lineHeight: '56px',
+                  letterSpacing: '0%'
+                }}
+              >
+                Projects
+              </ActiveLink>
 
-                  {/* Newsroom */}
-                  <Link
-                    href="https://trackstack-web.webflow.io/newsroom"
-                    onClick={closeMenu}
-                    className="block py-2 px-3 text-[#0D1117] hover:bg-gray-50 rounded-md"
-                    style={{
-                      fontFamily: "'Next Pan Book', sans-serif",
-                      fontWeight: 500,
-                      fontSize: '48px',
-                      lineHeight: '56px',
-                      letterSpacing: '0%'
-                    }}
-                  >
-                    Newsroom
-                  </Link>
+              <ActiveLink
+                href="/about"
+                onClick={closeMenu}
+                className="block pb-2 px-3 text-[#0D1117] hover:bg-gray-50 rounded-md"
+                activeClassName="bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white hover:from-[#667eea] hover:to-[#764ba2]"
+                style={{
+                  fontFamily: "'Next Pan Book', sans-serif",
+                  fontWeight: 500,
+                  fontSize: '20px',
+                  lineHeight: '56px',
+                  letterSpacing: '0%'
+                }}
+              >
+                About Us
+              </ActiveLink>
 
-                  {/* Footer Actions */}
-                  <div className="flex flex-col items-start gap-2 pt-[13px] pl-[16px]">
-                    <Link
-                      href="/pricing"
-                      onClick={closeMenu}
-                      className="block w-[180px] h-[48px] py-2.5 px-4 bg-black text-white rounded-md hover:bg-gray-900 transition-colors flex items-center justify-center"
-                      style={{
-                        fontFamily: "'Next Pan Book', sans-serif",
-                        fontWeight: 400,
-                        fontSize: '20px',
-                        lineHeight: '24px',
-                        letterSpacing: '0%'
-                      }}
-                    >
-                      Get Started
-                    </Link>
-                    <Link
-                      href="https://my.trackstack.app"
-                      onClick={closeMenu}
-                      className="block py-2.5 px-3 text-left text-[#86888B] hover:text-[#86888B]"
-                      style={{
-                        fontFamily: "'Next Pan Book', sans-serif",
-                        fontWeight: 400,
-                        fontSize: '24px',
-                        lineHeight: '24px',
-                        letterSpacing: '0%'
-                      }}
-                    >
-                      Sign in
-                    </Link>
-                  </div>
-                </>
-              )}
+              <ActiveLink
+                href="/contact"
+                onClick={closeMenu}
+                className="block pb-2 px-3 text-[#0D1117] hover:bg-gray-50 rounded-md"
+                activeClassName="bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white hover:from-[#667eea] hover:to-[#764ba2]"
+                style={{
+                  fontFamily: "'Next Pan Book', sans-serif",
+                  fontWeight: 500,
+                  fontSize: '20px',
+                  lineHeight: '56px',
+                  letterSpacing: '0%'
+                }}
+              >
+                Contact Us
+              </ActiveLink>
+
+              <ActiveLink
+                href="/careers"
+                onClick={closeMenu}
+                className="block pb-2 px-3 text-[#0D1117] hover:bg-gray-50 rounded-md"
+                activeClassName="bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white hover:from-[#667eea] hover:to-[#764ba2]"
+                style={{
+                  fontFamily: "'Next Pan Book', sans-serif",
+                  fontWeight: 500,
+                  fontSize: '20px',
+                  lineHeight: '56px',
+                  letterSpacing: '0%'
+                }}
+              >
+                Careers
+              </ActiveLink>
+
+              <ActiveLink
+                href="/team"
+                onClick={closeMenu}
+                className="block pb-2 px-3 text-[#0D1117] hover:bg-gray-50 rounded-md"
+                activeClassName="bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white hover:from-[#667eea] hover:to-[#764ba2]"
+                style={{
+                  fontFamily: "'Next Pan Book', sans-serif",
+                  fontWeight: 500,
+                  fontSize: '20px',
+                  lineHeight: '56px',
+                  letterSpacing: '0%'
+                }}
+              >
+                Team
+              </ActiveLink>
             </div>
           </nav>
         </div>
@@ -767,139 +786,82 @@ const DropdownSimple: React.FC<{
 
 const DesktopNav: React.FC<{ onMegaMenuOpenChange?: (open: boolean) => void; megaMenuOpen?: boolean }> = ({ onMegaMenuOpenChange, megaMenuOpen = false }) => (
   <div className="hidden md:block">
-    {/*     <div className="w-full" role="banner">
-      <Container className="flex">
-          <div>
-            <a href="/" aria-current="page" className="inline-flex items-center" aria-label="home">
-              <img
-                src="/images/LOGO_LOCKUP_WHITE.svg"
-                loading="lazy"
-                alt="Trackstack"
-                className="h-8 w-auto"
-              />
-            </a>
-          </div>
-          <div>
-            <nav role="navigation" className="flex items-center gap-2">
-              <DropdownSimple label="Products" id="0">
-                {products.map((p) => (
-                  <div className="flex items-center gap-2 py-1" key={p.label}>
-                    {p.iconSrc && <img src={p.iconSrc} loading="lazy" alt="" />}
-                    <Link href={p.href} className="text-sm text-white/80 hover:text-white" tabIndex={0}>
-                      {p.label}
-                    </Link>
-                  </div>
-                ))}
-              </DropdownSimple>
-
-              <DropdownMenu label="Products" id="1">
-                <div className="grid grid-cols-1 gap-2">
-                  {productDropdown.map((it) => (
-                    <DropdownCard item={it} key={it.title} />
-                  ))}
-                </div>
-              </DropdownMenu>
-
-              <a href="/pricing" className="px-3 py-2 text-sm font-medium text-white/80 hover:text-white">
-                Pricing
-              </a>
-              <a href="/about" className="px-3 py-2 text-sm font-medium text-white/80 hover:text-white">
-                About
-              </a>
-
-              <DropdownMenu label="Resources" id="2">
-                <div className="text-sm text-white/60">Coming soon</div>
-              </DropdownMenu>
-              <DropdownMenu label={"What's new"} id="3">
-                <div className="text-sm text-white/60">Coming soon</div>
-              </DropdownMenu>
-              <div className="hidden">
-                <a href="#" className="px-3 py-2 text-sm font-medium text-white/80 hover:text-white">
-                  Sign in
-                </a>
-                <a href="#" className="inline-flex items-center rounded-md bg-white text-gray-900 px-3 py-2 text-sm font-medium hover:bg-gray-100">
-                  Book a demo
-                </a>
-              </div>
-            </nav>
-          </div>
-          <div className="hidden md:flex items-center gap-3">
-            <a href="#" className="px-3 py-2 text-sm font-medium text-white/80 hover:text-white">
-              Sign in
-            </a>
-            <a href="#" className="inline-flex items-center rounded-full border bg-white text-gray-900 px-3 py-2 text-sm font-medium hover:bg-gray-100">
-              Get Started
-            </a>
-          </div>
-          <div
-            className="md:hidden"
-            aria-label="menu"
-            role="button"
-            tabIndex={0}
-            aria-controls="w-nav-overlay-1"
-            aria-haspopup="menu"
-            aria-expanded="false"
-          >
-            <div className="hidden"></div>
-            <img
-              src="https://cdn.prod.website-files.com/67bc62de4fbee3526afb633e/67e4deacf93d9a8148b516b0_Frame%20588.svg"
-              loading="lazy"
-              alt=""
-            />
-          </div>
-      </Container>
-      <div className="hidden" data-wf-ignore="" id="w-nav-overlay-1"></div>
-    </div> */}
     <div className="flex justify-between p-[25px]">
       <div>
         <Link href="/" aria-current="page" className="inline-flex items-center" aria-label="home">
           <img
-            src={megaMenuOpen ? "/images/LOGO_LOCKUP_BLACK.svg" : "/images/LOGO_LOCKUP_WHITE.svg"}
+            src="/images/LOGO_LOCKUP_WHITE.svg"
             loading="lazy"
-            alt="Trackstack"
+            alt="Stafona"
             className="w-[150px] h-[24px]"
           />
         </Link>
       </div>
       <div>
         <nav role="navigation" className="flex items-center gap-2">
-          <DropdownSimple label="Products" id="0">
-            {products.map((p) => (
-              <div className="flex items-center gap-2 py-1" key={p.label}>
-                {p.iconSrc && <img src={p.iconSrc} loading="lazy" alt="" />}
-                <Link href={p.href} className="text-sm text-white/80 hover:text-white" tabIndex={0}>
-                  {p.label}
-                </Link>
-              </div>
-            ))}
-          </DropdownSimple>
-
-          <DropdownMenu label="Products" id="1" isMegaMenu={true} onOpenChange={onMegaMenuOpenChange}>
-            <ProductsMegaMenu />
-          </DropdownMenu>
-
-
-          {/* <Link href="/pricing" className={`px-3 py-2 text-sm font-medium transition-colors ${megaMenuOpen ? "text-black/80 hover:text-black" : "text-white/80 hover:text-white"}`}>
-            Pricing
-          </Link> */}
-          <Link href="/about" className={`px-3 py-2 text-sm font-medium transition-colors ${megaMenuOpen ? "text-black/80 hover:text-black" : "text-white/80 hover:text-white"}`}>
-            About
-          </Link>
-
-          <Link href="https://my.trackstack.app" className={`px-3 py-2 text-sm font-medium transition-colors ${megaMenuOpen ? "text-black/80 hover:text-black" : "text-white/80 hover:text-white"}`}>Sign in</Link>
-          <Link
-            href="/pricing"
-            className={`inline-flex items-center justify-center rounded border h-8 px-4 text-sm font-medium transition-colors ${megaMenuOpen ? "border-black text-black hover:bg-black/10" : "border-white text-white hover:bg-white/10"}`}>Get Started</Link>
+          <ActiveLink 
+            href="/" 
+            className="px-3 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors relative"
+            activeClassName="text-white after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:bg-gradient-to-r after:from-[#667eea] after:to-[#764ba2]"
+          >
+            Home
+          </ActiveLink>
+          
+          <ActiveLink 
+            href="/services" 
+            className="px-3 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors relative"
+            activeClassName="text-white after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:bg-gradient-to-r after:from-[#667eea] after:to-[#764ba2]"
+          >
+            Our Services
+          </ActiveLink>
+          
+          <ActiveLink 
+            href="/projects" 
+            className="px-3 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors relative"
+            activeClassName="text-white after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:bg-gradient-to-r after:from-[#667eea] after:to-[#764ba2]"
+          >
+            Projects
+          </ActiveLink>
+          
+          <ActiveLink 
+            href="/about" 
+            className="px-3 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors relative"
+            activeClassName="text-white after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:bg-gradient-to-r after:from-[#667eea] after:to-[#764ba2]"
+          >
+            About Us
+          </ActiveLink>
+          
+          <ActiveLink 
+            href="/contact" 
+            className="px-3 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors relative"
+            activeClassName="text-white after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:bg-gradient-to-r after:from-[#667eea] after:to-[#764ba2]"
+          >
+            Contact Us
+          </ActiveLink>
+          
+          <ActiveLink 
+            href="/careers" 
+            className="px-3 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors relative"
+            activeClassName="text-white after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:bg-gradient-to-r after:from-[#667eea] after:to-[#764ba2]"
+          >
+            Careers
+          </ActiveLink>
+          
+          <ActiveLink 
+            href="/team" 
+            className="px-3 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors relative"
+            activeClassName="text-white after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:bg-gradient-to-r after:from-[#667eea] after:to-[#764ba2]"
+          >
+            Team
+          </ActiveLink>
         </nav>
       </div>
-
     </div>
   </div>
 );
 
 const Navigation: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [megaMenuOpen, setMegaMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 0);
@@ -910,15 +872,12 @@ const Navigation: React.FC = () => {
 
   return (
     <div
-      className={`fixed top-0 inset-x-0 z-50 transition-colors duration-300 ${megaMenuOpen
-        ? "bg-white"
-        : scrolled
-          ? "backdrop-blur"
-          : "bg-transparent"
-        }`}
+      className={`fixed top-0 inset-x-0 z-50 transition-colors duration-300 ${
+        scrolled ? "backdrop-blur bg-[#0a0e27]/95" : "bg-transparent"
+      }`}
     >
       <MobileNav />
-      <DesktopNav onMegaMenuOpenChange={setMegaMenuOpen} megaMenuOpen={megaMenuOpen} />
+      <DesktopNav />
     </div>
   );
 };
