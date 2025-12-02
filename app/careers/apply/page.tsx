@@ -1,9 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
-export default function JobApplicationPage() {
+// Mark this route as dynamic to prevent prerendering issues
+export const dynamic = 'force-dynamic';
+
+function ApplicationForm() {
   const searchParams = useSearchParams();
   const position = searchParams.get("position") || "General Application";
 
@@ -283,3 +286,14 @@ export default function JobApplicationPage() {
   );
 }
 
+export default function JobApplicationPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: 'var(--midnight)' }}>
+        <div className="text-white text-xl">Loading...</div>
+      </div>
+    }>
+      <ApplicationForm />
+    </Suspense>
+  );
+}

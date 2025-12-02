@@ -2,6 +2,9 @@
 
 import { useParams } from "next/navigation";
 
+// Mark this route as dynamic to prevent prerendering issues
+export const dynamic = 'force-dynamic';
+
 export default function ProjectDetailPage() {
   const params = useParams();
   const slug = params.slug as string;
