@@ -64,9 +64,28 @@ export default function CareersPage() {
               Current Openings
             </span>
             <h2 className="text-4xl font-bold text-white mt-4">Open Positions</h2>
-            <p className="text-white/70 mt-4">Explore exciting opportunities to join our growing team</p>
           </div>
 
+          {/* No Positions Available Message */}
+          <div className="max-w-[800px] mx-auto">
+            <div className="bg-[#1e293b] p-12 rounded-2xl border border-white/5 text-center">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-[#667eea]/20 flex items-center justify-center">
+                <span className="text-4xl">💼</span>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">No Positions Available</h3>
+              <p className="text-white/70 text-lg leading-relaxed mb-6">
+                There are no open positions available at the moment. Please visit our page for further details or check back later for new opportunities.
+              </p>
+              <p className="text-white/60 text-base">
+                Interested in joining our team? Feel free to send us your resume at{' '}
+                <a href="mailto:careers@stafona.com" className="text-[#667eea] hover:text-[#764ba2] transition-colors">
+                  careers@stafona.com
+                </a>
+              </p>
+            </div>
+          </div>
+
+          {/* Commented out job listings
           <div className="grid md:grid-cols-2 gap-6">
             {positions.map((position, index) => (
               <div key={index} className="bg-[#131929] p-6 rounded-xl border border-white/10 hover:border-[#667eea] transition-all">
@@ -92,6 +111,7 @@ export default function CareersPage() {
               </div>
             ))}
           </div>
+          */}
         </div>
       </section>
 

@@ -1,6 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
+import BarChartIcon from '@mui/icons-material/BarChart';
+import AssignmentIcon from '@mui/icons-material/Assignment';
+import PaletteIcon from '@mui/icons-material/Palette';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import ChatIcon from '@mui/icons-material/Chat';
+import SchoolIcon from '@mui/icons-material/School';
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+
 export default function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState("all");
 
@@ -57,7 +67,7 @@ export default function ProjectsPage() {
                 className="bg-[#131929] rounded-xl overflow-hidden border border-white/10 hover:border-[#667eea] transition-all hover:transform hover:-translate-y-2 group block"
               >
                 <div className="relative h-48 bg-gradient-to-br from-[#667eea] to-[#764ba2] flex items-center justify-center">
-                  <span className="text-6xl">{project.icon}</span>
+                  {project.icon}
                   <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <span className="text-white font-semibold">View Project</span>
                   </div>
@@ -123,7 +133,7 @@ const filters = [
 const projects = [
   {
     slug: "ecommerce-platform",
-    icon: "🛒",
+    icon: <ShoppingCartIcon sx={{ fontSize: 48, color: 'white' }} />,
     category: "web",
     title: "E-Commerce Platform",
     description: "A comprehensive online marketplace with advanced filtering, payment integration, and real-time inventory management.",
@@ -131,7 +141,7 @@ const projects = [
   },
   {
     slug: "fitness-tracking-app",
-    icon: "💪",
+    icon: <FitnessCenterIcon sx={{ fontSize: 48, color: 'white' }} />,
     category: "mobile",
     title: "Fitness Tracking App",
     description: "Cross-platform mobile application with AI-powered workout recommendations and social features.",
@@ -139,7 +149,7 @@ const projects = [
   },
   {
     slug: "smart-analytics-dashboard",
-    icon: "📊",
+    icon: <BarChartIcon sx={{ fontSize: 48, color: 'white' }} />,
     category: "ai",
     title: "Smart Analytics Dashboard",
     description: "AI-powered business intelligence platform with predictive analytics and automated reporting.",
@@ -147,7 +157,7 @@ const projects = [
   },
   {
     slug: "saas-project-management",
-    icon: "📋",
+    icon: <AssignmentIcon sx={{ fontSize: 48, color: 'white' }} />,
     category: "web",
     title: "SaaS Project Management Tool",
     description: "Cloud-based collaboration platform with real-time updates, task management, and team analytics.",
@@ -155,7 +165,7 @@ const projects = [
   },
   {
     slug: "nft-marketplace",
-    icon: "🎨",
+    icon: <PaletteIcon sx={{ fontSize: 48, color: 'white' }} />,
     category: "blockchain",
     title: "NFT Marketplace",
     description: "Decentralized marketplace for digital assets with smart contract integration and wallet connectivity.",
@@ -163,7 +173,7 @@ const projects = [
   },
   {
     slug: "delivery-service-app",
-    icon: "🚚",
+    icon: <LocalShippingIcon sx={{ fontSize: 48, color: 'white' }} />,
     category: "mobile",
     title: "Delivery Service App",
     description: "On-demand delivery application with real-time tracking, payment integration, and driver management.",
@@ -171,7 +181,7 @@ const projects = [
   },
   {
     slug: "customer-service-chatbot",
-    icon: "💬",
+    icon: <ChatIcon sx={{ fontSize: 48, color: 'white' }} />,
     category: "ai",
     title: "Customer Service Chatbot",
     description: "NLP-powered chatbot that handles customer inquiries 24/7 with 95% accuracy rate.",
@@ -179,7 +189,7 @@ const projects = [
   },
   {
     slug: "online-learning-platform",
-    icon: "🎓",
+    icon: <SchoolIcon sx={{ fontSize: 48, color: 'white' }} />,
     category: "web",
     title: "Online Learning Platform",
     description: "Comprehensive e-learning platform with video streaming, interactive quizzes, and progress tracking.",
@@ -187,7 +197,7 @@ const projects = [
   },
   {
     slug: "defi-lending-platform",
-    icon: "💰",
+    icon: <AccountBalanceIcon sx={{ fontSize: 48, color: 'white' }} />,
     category: "blockchain",
     title: "DeFi Lending Platform",
     description: "Decentralized finance platform enabling peer-to-peer lending with automated smart contracts.",

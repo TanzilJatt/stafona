@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export default function HomePage() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
@@ -83,12 +85,13 @@ export default function HomePage() {
               </p>
               <Link
                 href="/about"
-                className="inline-flex items-center text-[#667eea] hover:text-[#764ba2] font-semibold transition-colors"
+                className="group inline-flex items-center px-6 py-3 bg-[#667eea]/10 hover:bg-[#667eea]/20 border-2 border-[#667eea] text-[#667eea] hover:text-white hover:bg-[#667eea] rounded-full font-semibold transition-all duration-300"
               >
                 Learn More About Us
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+                <ArrowForwardIcon 
+                  className="ml-2 transition-transform duration-300 group-hover:translate-x-1" 
+                  sx={{ fontSize: 20 }}
+                />
               </Link>
             </div>
             <div className="relative order-first md:order-last">
@@ -273,9 +276,7 @@ export default function HomePage() {
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white rounded-full font-semibold text-lg hover:opacity-90 transition-opacity"
             >
               View All Services
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+              <ArrowForwardIcon className="ml-2" sx={{ fontSize: 20 }} />
             </Link>
           </div>
         </div>
@@ -316,12 +317,13 @@ export default function HomePage() {
               </p>
               <Link
                 href="/projects"
-                className="inline-flex items-center text-[#667eea] hover:text-[#764ba2] font-semibold transition-colors text-lg"
+                className="group inline-flex items-center px-6 py-3 bg-[#667eea]/10 hover:bg-[#667eea]/20 border-2 border-[#667eea] text-[#667eea] hover:text-white hover:bg-[#667eea] rounded-full font-semibold transition-all duration-300 text-lg"
               >
                 Explore Our Projects
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+                <ArrowForwardIcon 
+                  className="ml-2 transition-transform duration-300 group-hover:translate-x-1" 
+                  sx={{ fontSize: 20 }}
+                />
               </Link>
             </div>
       </div>
@@ -372,38 +374,33 @@ export default function HomePage() {
                 return (
                   <div
                     key={index}
-                    className="bg-[#131929] rounded-xl border border-white/10 overflow-hidden transition-all"
+                    className="bg-[#131929] rounded-xl border border-white/10 overflow-hidden transition-all duration-300"
                   >
                     <button
                       onClick={() => setOpenFaqIndex(isOpen ? null : index)}
-                      className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-white/5 transition-colors"
+                      className="w-full px-5 py-5 flex items-center justify-between text-left hover:bg-white/5 transition-colors"
                     >
                       <span className="text-lg font-semibold text-white pr-4">
                         {faq.question}
                       </span>
-                      <svg
-                        className={`w-6 h-6 text-[#667eea] flex-shrink-0 transition-transform ${
+                      <ExpandMoreIcon 
+                        className={`flex-shrink-0 transition-transform duration-300 ${
                           isOpen ? 'rotate-180' : ''
                         }`}
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
+                        sx={{ fontSize: 28, color: '#667eea' }}
+                      />
                     </button>
-                    {isOpen && (
-                      <div className="px-6 pb-5">
+                    <div 
+                      className={`transition-all duration-300 ease-in-out ${
+                        isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                      }`}
+                    >
+                      <div className="px-5 pt-5 pb-5">
                         <p className="text-white/70 leading-relaxed">
                           {faq.answer}
                         </p>
                       </div>
-                    )}
+                    </div>
                   </div>
                 );
               })}
@@ -412,12 +409,13 @@ export default function HomePage() {
             <div className="mt-8 text-center">
               <Link
                 href="/faq"
-                className="inline-flex items-center text-[#667eea] hover:text-[#764ba2] font-semibold transition-colors text-lg"
+                className="group inline-flex items-center px-6 py-3 bg-[#667eea]/10 hover:bg-[#667eea]/20 border-2 border-[#667eea] text-[#667eea] hover:text-white hover:bg-[#667eea] rounded-full font-semibold transition-all duration-300 text-lg"
               >
                 View All FAQs
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+                <ArrowForwardIcon 
+                  className="ml-2 transition-transform duration-300 group-hover:translate-x-1" 
+                  sx={{ fontSize: 20 }}
+                />
               </Link>
             </div>
           </div>
@@ -427,7 +425,7 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-20 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
         <div className="max-w-[1200px] mx-auto">
-          <div className="bg-gradient-to-r from-[#667eea] to-[#764ba2] rounded-2xl p-12 md:p-16 text-center">
+          <div className="bg-gradient-to-r from-[#667eea] to-[#764ba2] rounded-2xl p-4 md:p-16 text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Start Your Project?
             </h2>

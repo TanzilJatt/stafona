@@ -1,5 +1,12 @@
 "use client";
 
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import LightbulbIcon from '@mui/icons-material/Lightbulb';
+import HandshakeIcon from '@mui/icons-material/Handshake';
+import ShieldIcon from '@mui/icons-material/Shield';
+import BoltIcon from '@mui/icons-material/Bolt';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen">
@@ -119,7 +126,7 @@ export default function AboutPage() {
             {values.map((value, index) => (
               <div key={index} className="bg-[#131929] p-6 rounded-xl border border-white/10 text-center">
                 <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#667eea]/20 flex items-center justify-center">
-                  <span className="text-2xl">{value.icon}</span>
+                  {value.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{value.title}</h3>
                 <p className="text-white/70 text-sm">{value.description}</p>
@@ -152,7 +159,7 @@ export default function AboutPage() {
 }
 
 const stats = [
-  { number: "10+", label: "Years", description: "Of Excellence" },
+  { number: "15+", label: "Years", description: "Of Excellence" },
   { number: "500+", label: "Projects", description: "Completed" },
   { number: "200+", label: "Clients", description: "Worldwide" },
   { number: "50+", label: "Team", description: "Members" },
@@ -161,11 +168,11 @@ const stats = [
 ];
 
 const values = [
-  { icon: "✨", title: "Excellence", description: "We pursue the highest standards in everything we do" },
-  { icon: "💡", title: "Innovation", description: "We embrace new technologies and creative solutions" },
-  { icon: "🤝", title: "Collaboration", description: "We work together to achieve shared success" },
-  { icon: "🛡️", title: "Integrity", description: "We build trust through honesty and transparency" },
-  { icon: "⚡", title: "Agility", description: "We adapt quickly to changing needs" },
-  { icon: "❤️", title: "Client-Centric", description: "Your success is our success" }
+  { icon: <AutoAwesomeIcon sx={{ fontSize: 32, color: '#667eea' }} />, title: "Excellence", description: "We pursue the highest standards in everything we do" },
+  { icon: <LightbulbIcon sx={{ fontSize: 32, color: '#667eea' }} />, title: "Innovation", description: "We embrace new technologies and creative solutions" },
+  { icon: <HandshakeIcon sx={{ fontSize: 32, color: '#667eea' }} />, title: "Collaboration", description: "We work together to achieve shared success" },
+  { icon: <ShieldIcon sx={{ fontSize: 32, color: '#667eea' }} />, title: "Integrity", description: "We build trust through honesty and transparency" },
+  { icon: <BoltIcon sx={{ fontSize: 32, color: '#667eea' }} />, title: "Agility", description: "We adapt quickly to changing needs" },
+  { icon: <FavoriteIcon sx={{ fontSize: 32, color: '#667eea' }} />, title: "Client-Centric", description: "Your success is our success" }
 ];
 

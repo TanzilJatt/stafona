@@ -1,6 +1,8 @@
 "use client";
 
 import { useParams } from "next/navigation";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 
 // Mark this route as dynamic to prevent prerendering issues
 export const dynamic = 'force-dynamic';
@@ -32,7 +34,7 @@ export default function ProjectDetailPage() {
           {/* Project Image */}
           <div className="relative h-[400px] md:h-[600px] rounded-2xl bg-gradient-to-br from-[#667eea] to-[#764ba2] overflow-hidden">
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-9xl">{project.icon}</span>
+              {project.icon}
             </div>
           </div>
         </div>
@@ -157,7 +159,7 @@ export default function ProjectDetailPage() {
 const projects = [
   {
     slug: "ecommerce-platform",
-    icon: "🛒",
+    icon: <ShoppingCartIcon sx={{ fontSize: 144, color: 'white' }} />,
     category: "Web Application",
     title: "E-Commerce Platform",
     fullDescription: "A comprehensive online marketplace with advanced filtering, payment integration, and real-time inventory management built for a leading retail brand.",
@@ -184,7 +186,7 @@ const projects = [
   },
   {
     slug: "fitness-tracking-app",
-    icon: "💪",
+    icon: <FitnessCenterIcon sx={{ fontSize: 144, color: 'white' }} />,
     category: "Mobile Application",
     title: "Fitness Tracking App",
     fullDescription: "Cross-platform mobile application with AI-powered workout recommendations and social features for fitness enthusiasts.",

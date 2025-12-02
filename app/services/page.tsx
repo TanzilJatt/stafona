@@ -1,4 +1,15 @@
 "use client";
+
+import CodeIcon from '@mui/icons-material/Code';
+import SmartToyIcon from '@mui/icons-material/SmartToy';
+import CloudIcon from '@mui/icons-material/Cloud';
+import LanguageIcon from '@mui/icons-material/Language';
+import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
+import PaletteIcon from '@mui/icons-material/Palette';
+import SettingsIcon from '@mui/icons-material/Settings';
+import LinkIcon from '@mui/icons-material/Link';
+import LockIcon from '@mui/icons-material/Lock';
+
 export default function ServicesPage() {
   return (
     <div className="min-h-screen">
@@ -27,7 +38,7 @@ export default function ServicesPage() {
                 className="bg-[#131929] p-8 rounded-xl border border-white/10 hover:border-[#667eea] transition-all hover:transform hover:-translate-y-2"
               >
                 <div className="w-16 h-16 mb-6 rounded-lg flex items-center justify-center bg-gradient-to-br from-[#667eea] to-[#764ba2]">
-                  <span className="text-3xl">{service.icon}</span>
+                  {service.icon}
                 </div>
                 <h2 className="text-2xl font-bold text-white mb-4">{service.title}</h2>
                 <p className="text-white/70 mb-6 leading-relaxed">{service.description}</p>
@@ -76,7 +87,7 @@ export default function ServicesPage() {
 
 const services = [
   {
-    icon: "💻",
+    icon: <CodeIcon sx={{ fontSize: 40, color: 'white' }} />,
     title: "Custom Software Development",
     description: "Tailored software solutions built to address your unique business challenges and drive growth.",
     features: [
@@ -87,7 +98,7 @@ const services = [
     ]
   },
   {
-    icon: "🤖",
+    icon: <SmartToyIcon sx={{ fontSize: 40, color: 'white' }} />,
     title: "AI & Machine Learning",
     description: "Harness the power of artificial intelligence to automate processes and gain valuable insights.",
     features: [
@@ -98,7 +109,7 @@ const services = [
     ]
   },
   {
-    icon: "☁️",
+    icon: <CloudIcon sx={{ fontSize: 40, color: 'white' }} />,
     title: "Cloud Solutions",
     description: "Scalable cloud infrastructure and migration services for enhanced performance and reliability.",
     features: [
@@ -109,7 +120,7 @@ const services = [
     ]
   },
   {
-    icon: "🌐",
+    icon: <LanguageIcon sx={{ fontSize: 40, color: 'white' }} />,
     title: "Web Development",
     description: "Modern, responsive websites and web applications that deliver exceptional user experiences.",
     features: [
@@ -120,7 +131,7 @@ const services = [
     ]
   },
   {
-    icon: "📱",
+    icon: <PhoneAndroidIcon sx={{ fontSize: 40, color: 'white' }} />,
     title: "Mobile App Development",
     description: "Native and cross-platform mobile applications for iOS and Android that users love.",
     features: [
@@ -131,7 +142,7 @@ const services = [
     ]
   },
   {
-    icon: "🎨",
+    icon: <PaletteIcon sx={{ fontSize: 40, color: 'white' }} />,
     title: "UI/UX Design",
     description: "Beautiful, intuitive interfaces designed with user experience and conversion in mind.",
     features: [
@@ -142,7 +153,7 @@ const services = [
     ]
   },
   {
-    icon: "⚙️",
+    icon: <SettingsIcon sx={{ fontSize: 40, color: 'white' }} />,
     title: "DevOps & Automation",
     description: "Streamline your development pipeline with continuous integration and deployment solutions.",
     features: [
@@ -153,7 +164,7 @@ const services = [
     ]
   },
   {
-    icon: "🔗",
+    icon: <LinkIcon sx={{ fontSize: 40, color: 'white' }} />,
     title: "Blockchain Development",
     description: "Secure, decentralized solutions leveraging blockchain technology for various applications.",
     features: [
@@ -164,7 +175,7 @@ const services = [
     ]
   },
   {
-    icon: "🔒",
+    icon: <LockIcon sx={{ fontSize: 40, color: 'white' }} />,
     title: "Cybersecurity",
     description: "Protect your digital assets with comprehensive security audits and implementation services.",
     features: [

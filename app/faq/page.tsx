@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function FAQPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -151,38 +152,33 @@ export default function FAQPage() {
                   return (
                     <div
                       key={qIndex}
-                      className="bg-[#131929] rounded-xl border border-white/10 overflow-hidden transition-all"
+                      className="bg-[#131929] rounded-xl border border-white/10 overflow-hidden transition-all duration-300"
                     >
                       <button
                         onClick={() => setOpenIndex(isOpen ? null : globalIndex)}
-                        className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-white/5 transition-colors"
+                        className="w-full px-5 py-5 flex items-center justify-between text-left hover:bg-white/5 transition-colors"
                       >
                         <span className="text-lg font-semibold text-white pr-4">
                           {faq.question}
                         </span>
-                        <svg
-                          className={`w-6 h-6 text-[#667eea] flex-shrink-0 transition-transform ${
+                        <ExpandMoreIcon 
+                          className={`flex-shrink-0 transition-transform duration-300 ${
                             isOpen ? 'rotate-180' : ''
                           }`}
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
+                          sx={{ fontSize: 28, color: '#667eea' }}
+                        />
                       </button>
-                      {isOpen && (
-                        <div className="px-6 pb-5">
+                      <div 
+                        className={`transition-all duration-300 ease-in-out ${
+                          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                        }`}
+                      >
+                        <div className="px-5 pt-5 pb-5">
                           <p className="text-white/70 leading-relaxed">
                             {faq.answer}
                           </p>
                         </div>
-                      )}
+                      </div>
                     </div>
                   );
                 })}

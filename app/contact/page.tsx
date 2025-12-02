@@ -1,7 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import Footer from "../../components/Footer";
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import FacebookIcon from '@mui/icons-material/Facebook';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -47,29 +53,31 @@ export default function ContactPage() {
           {/* Contact Info */}
           <div className="md:col-span-2 space-y-6">
             {contactInfo.map((info, index) => (
-              <div key={index} className="bg-[#131929] p-6 rounded-xl border border-white/10">
-                <div className="w-12 h-12 mb-4 rounded-lg flex items-center justify-center bg-gradient-to-br from-[#667eea] to-[#764ba2]">
-                  <span className="text-2xl">{info.icon}</span>
+              <div key={index} className="bg-[#1e293b] p-6 rounded-2xl border border-white/5 flex items-center gap-5">
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center bg-gradient-to-br from-[#667eea] to-[#764ba2] flex-shrink-0">
+                  {info.icon}
                 </div>
-                <h2 className="text-xl font-bold text-white mb-2">{info.title}</h2>
-                {info.details.map((detail, idx) => (
-                  <p key={idx} className="text-white/70">{detail}</p>
-                ))}
+                <div className="flex-1">
+                  <h2 className="text-xl font-bold text-white" style={{ margin: 0 }}>{info.title}</h2>
+                  {info.details.map((detail, idx) => (
+                    <p key={idx} className="text-white/60 text-base leading-relaxed">{detail}</p>
+                  ))}
+                </div>
               </div>
             ))}
 
             {/* Social Links */}
-            <div className="bg-[#131929] p-6 rounded-xl border border-white/10">
+            <div className="bg-[#1e293b] p-6 rounded-2xl border border-white/5">
               <h2 className="text-xl font-bold text-white mb-4">Follow Us</h2>
               <div className="flex gap-3">
                 {socialLinks.map((social, index) => (
                   <a
                     key={index}
                     href={social.url}
-                    className="w-10 h-10 rounded-lg bg-[#667eea]/20 hover:bg-[#667eea] flex items-center justify-center transition-colors"
+                    className="w-12 h-12 rounded-xl bg-[#667eea]/20 hover:bg-[#667eea] flex items-center justify-center transition-all hover:scale-110"
                     aria-label={social.name}
                   >
-                    <span>{social.icon}</span>
+                    {social.icon}
                   </a>
                 ))}
               </div>
@@ -78,7 +86,7 @@ export default function ContactPage() {
 
           {/* Contact Form */}
           <div className="md:col-span-3">
-            <form onSubmit={handleSubmit} className="bg-[#131929] p-8 rounded-xl border border-white/10">
+            <form onSubmit={handleSubmit} className="bg-[#1e293b] p-8 rounded-2xl border border-white/5">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-white/70 text-sm font-semibold mb-2">
@@ -187,33 +195,32 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }
 
 const contactInfo = [
   {
-    icon: "📧",
+    icon: <EmailIcon sx={{ fontSize: 32, color: 'white' }} />,
     title: "Email",
     details: ["contact@stafona.com", "support@stafona.com"]
   },
   {
-    icon: "📞",
+    icon: <PhoneIcon sx={{ fontSize: 32, color: 'white' }} />,
     title: "Phone",
     details: ["+1 (555) 123-4567", "+1 (555) 987-6543"]
   },
   {
-    icon: "📍",
+    icon: <LocationOnIcon sx={{ fontSize: 32, color: 'white' }} />,
     title: "Office",
     details: ["123 Tech Avenue", "Silicon Valley, CA 94025"]
   }
 ];
 
 const socialLinks = [
-  { name: "LinkedIn", icon: "💼", url: "#" },
-  { name: "Twitter", icon: "🐦", url: "#" },
-  { name: "GitHub", icon: "💻", url: "#" },
-  { name: "Facebook", icon: "📘", url: "#" }
+  { name: "LinkedIn", icon: <LinkedInIcon sx={{ fontSize: 24, color: 'white' }} />, url: "https://www.linkedin.com/company/stafona" },
+  { name: "Twitter", icon: <TwitterIcon sx={{ fontSize: 24, color: 'white' }} />, url: "https://twitter.com/stafona" },
+  { name: "GitHub", icon: <GitHubIcon sx={{ fontSize: 24, color: 'white' }} />, url: "https://github.com/stafona" },
+  { name: "Facebook", icon: <FacebookIcon sx={{ fontSize: 24, color: 'white' }} />, url: "#" }
 ];
 

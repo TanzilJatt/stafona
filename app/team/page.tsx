@@ -1,5 +1,12 @@
 "use client";
 
+import CodeIcon from '@mui/icons-material/Code';
+import PaletteIcon from '@mui/icons-material/Palette';
+import SmartToyIcon from '@mui/icons-material/SmartToy';
+import SettingsIcon from '@mui/icons-material/Settings';
+import SearchIcon from '@mui/icons-material/Search';
+import BarChartIcon from '@mui/icons-material/BarChart';
+
 export default function TeamPage() {
   return (
     <div className="min-h-screen">
@@ -31,7 +38,7 @@ export default function TeamPage() {
                   className="w-32 h-32 mx-auto mb-6 rounded-full flex items-center justify-center"
                   style={{ background: team.gradient }}
                 >
-                  <span className="text-5xl">{team.icon}</span>
+                  {team.icon}
                 </div>
                 <h2 className="text-2xl font-bold text-white mb-2">{team.name}</h2>
                 <p className="text-[#667eea] font-semibold mb-4">{team.role}</p>
@@ -73,42 +80,42 @@ export default function TeamPage() {
 
 const teams = [
   {
-    icon: "👨‍💻",
+    icon: <CodeIcon sx={{ fontSize: 50, color: 'white' }} />,
     name: "Development Team",
     role: "Full-Stack Developers",
     gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
     description: "Expert developers proficient in modern frameworks and best coding practices. Our team builds scalable, maintainable applications."
   },
   {
-    icon: "🎨",
+    icon: <PaletteIcon sx={{ fontSize: 50, color: 'white' }} />,
     name: "Design Team",
     role: "UI/UX Designers",
     gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
     description: "Creative designers crafting beautiful and intuitive user experiences. We focus on user-centered design principles."
   },
   {
-    icon: "🤖",
+    icon: <SmartToyIcon sx={{ fontSize: 50, color: 'white' }} />,
     name: "AI/ML Team",
     role: "Data Scientists",
     gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
     description: "Specialists in artificial intelligence and machine learning solutions. Our data scientists transform complex data into insights."
   },
   {
-    icon: "⚙️",
+    icon: <SettingsIcon sx={{ fontSize: 50, color: 'white' }} />,
     name: "DevOps Team",
     role: "Infrastructure Engineers",
     gradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
     description: "DevOps experts ensuring smooth deployment and system reliability. We automate processes and maintain robust infrastructure."
   },
   {
-    icon: "🔍",
+    icon: <SearchIcon sx={{ fontSize: 50, color: 'white' }} />,
     name: "QA Team",
     role: "Quality Assurance",
     gradient: "linear-gradient(135deg, #30cfd0 0%, #330867 100%)",
     description: "Meticulous testers ensuring flawless product quality and performance. Our QA team guarantees every release meets standards."
   },
   {
-    icon: "📊",
+    icon: <BarChartIcon sx={{ fontSize: 50, color: 'white' }} />,
     name: "Project Management",
     role: "PMs & Scrum Masters",
     gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
