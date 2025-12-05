@@ -46,7 +46,7 @@ function ApplicationForm() {
       {/* Page Header */}
       <section className="pt-32 pb-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
         <div className="max-w-[1200px] mx-auto text-center">
-          <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color, #667eea)' }}>
+          <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color, #0A9548)' }}>
             Join Our Team
           </span>
           <h1 className="text-5xl md:text-6xl font-bold text-white mt-4 mb-6">
@@ -61,7 +61,7 @@ function ApplicationForm() {
       {/* Application Form */}
       <section className="py-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight-95)' }}>
         <div className="max-w-[900px] mx-auto">
-          <form onSubmit={handleSubmit} className="bg-[#131929] p-8 md:p-12 rounded-xl border border-white/10">
+          <form onSubmit={handleSubmit} className="bg-[#020202] p-8 md:p-12 rounded-xl border border-white/10">
             <div className="space-y-8">
               {/* Personal Information */}
               <div>
@@ -77,7 +77,7 @@ function ApplicationForm() {
                       value={formData.firstName}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#667eea] focus:outline-none"
+                      className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#0A9548] focus:outline-none"
                       placeholder="John"
                     />
                   </div>
@@ -92,7 +92,7 @@ function ApplicationForm() {
                       value={formData.lastName}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#667eea] focus:outline-none"
+                      className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#0A9548] focus:outline-none"
                       placeholder="Doe"
                     />
                   </div>
@@ -107,7 +107,7 @@ function ApplicationForm() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#667eea] focus:outline-none"
+                      className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#0A9548] focus:outline-none"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -122,7 +122,7 @@ function ApplicationForm() {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#667eea] focus:outline-none"
+                      className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#0A9548] focus:outline-none"
                       placeholder="+1 (555) 000-0000"
                     />
                   </div>
@@ -136,7 +136,7 @@ function ApplicationForm() {
                       name="linkedIn"
                       value={formData.linkedIn}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#667eea] focus:outline-none"
+                      className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#0A9548] focus:outline-none"
                       placeholder="https://linkedin.com/in/yourprofile"
                     />
                   </div>
@@ -150,7 +150,7 @@ function ApplicationForm() {
                       name="portfolio"
                       value={formData.portfolio}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#667eea] focus:outline-none"
+                      className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#0A9548] focus:outline-none"
                       placeholder="https://yourportfolio.com"
                     />
                   </div>
@@ -170,7 +170,7 @@ function ApplicationForm() {
                       value={formData.position}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#667eea] focus:outline-none"
+                      className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#0A9548] focus:outline-none"
                     >
                       <option value="">Select a position</option>
                       <option value="Senior Full-Stack Developer">Senior Full-Stack Developer</option>
@@ -192,7 +192,7 @@ function ApplicationForm() {
                       value={formData.experience}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#667eea] focus:outline-none"
+                      className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#0A9548] focus:outline-none"
                     >
                       <option value="">Select experience</option>
                       <option value="0-2">0-2 years</option>
@@ -211,7 +211,7 @@ function ApplicationForm() {
                       value={formData.availability}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#667eea] focus:outline-none"
+                      className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#0A9548] focus:outline-none"
                     >
                       <option value="">Select availability</option>
                       <option value="Immediately">Immediately</option>
@@ -236,7 +236,7 @@ function ApplicationForm() {
                     onChange={handleChange}
                     required
                     rows={8}
-                    className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#667eea] focus:outline-none resize-none"
+                    className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#0A9548] focus:outline-none resize-none"
                     placeholder="Share your passion, experience, and what makes you unique..."
                   />
                 </div>
@@ -255,7 +255,7 @@ function ApplicationForm() {
                     onChange={handleFileChange}
                     accept=".pdf,.doc,.docx"
                     required
-                    className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#667eea] focus:outline-none file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#667eea] file:text-white hover:file:bg-[#5568d3]"
+                    className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#0A9548] focus:outline-none file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#0A9548] file:text-white hover:file:bg-[#5568d3]"
                   />
                   {formData.resume && (
                     <p className="mt-2 text-sm text-white/60">
@@ -269,7 +269,7 @@ function ApplicationForm() {
               <div className="pt-4">
                 <button
                   type="submit"
-                  className="w-full px-8 py-4 bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white rounded-full font-semibold text-lg hover:opacity-90 transition-opacity"
+                  className="w-full px-8 py-4 bg-gradient-to-r from-[#0A9548] to-[#16DB65] text-white rounded-full font-semibold text-lg hover:opacity-90 transition-opacity"
                 >
                   Submit Application
                 </button>

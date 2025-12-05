@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ReviewsSlider from "@/components/ReviewsSlider";
+import ClientsMarquee from "@/components/ClientsMarquee";
 
 export default function HomePage() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
@@ -66,8 +68,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Clients Marquee */}
+      <ClientsMarquee />
+
       {/* About Section - Image with Text */}
-      <section className="py-20 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight-95)' }}>
+      <section className="py-20 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: '#131929' }}>
         <div className="max-w-[1200px] mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -185,7 +190,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="group bg-[#131929] p-8 rounded-xl border border-white/10 hover:border-[#667eea] transition-all hover:transform hover:-translate-y-1">
+            <div className="group bg-[#020202] p-8 rounded-xl border border-white/10 hover:border-[#667eea] transition-all hover:transform hover:-translate-y-1">
               <div className="text-4xl mb-4">🌐</div>
               <h3 className="text-2xl font-bold text-white mb-4">Web 2.0</h3>
               <p className="text-white/70 leading-relaxed mb-4">
@@ -199,7 +204,7 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <div className="group bg-[#131929] p-8 rounded-xl border border-white/10 hover:border-[#667eea] transition-all hover:transform hover:-translate-y-1">
+            <div className="group bg-[#020202] p-8 rounded-xl border border-white/10 hover:border-[#667eea] transition-all hover:transform hover:-translate-y-1">
               <div className="text-4xl mb-4">🛒</div>
               <h3 className="text-2xl font-bold text-white mb-4">E-Commerce</h3>
               <p className="text-white/70 leading-relaxed mb-4">
@@ -213,7 +218,7 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <div className="group bg-[#131929] p-8 rounded-xl border border-white/10 hover:border-[#667eea] transition-all hover:transform hover:-translate-y-1">
+            <div className="group bg-[#020202] p-8 rounded-xl border border-white/10 hover:border-[#667eea] transition-all hover:transform hover:-translate-y-1">
               <div className="text-4xl mb-4">📝</div>
               <h3 className="text-2xl font-bold text-white mb-4">Content Management</h3>
               <p className="text-white/70 leading-relaxed mb-4">
@@ -227,7 +232,7 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <div className="group bg-[#131929] p-8 rounded-xl border border-white/10 hover:border-[#667eea] transition-all hover:transform hover:-translate-y-1">
+            <div className="group bg-[#020202] p-8 rounded-xl border border-white/10 hover:border-[#667eea] transition-all hover:transform hover:-translate-y-1">
               <div className="text-4xl mb-4">⚡</div>
               <h3 className="text-2xl font-bold text-white mb-4">Business Automation</h3>
               <p className="text-white/70 leading-relaxed mb-4">
@@ -241,7 +246,7 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <div className="group bg-[#131929] p-8 rounded-xl border border-white/10 hover:border-[#667eea] transition-all hover:transform hover:-translate-y-1">
+            <div className="group bg-[#020202] p-8 rounded-xl border border-white/10 hover:border-[#667eea] transition-all hover:transform hover:-translate-y-1">
               <div className="text-4xl mb-4">☁️</div>
               <h3 className="text-2xl font-bold text-white mb-4">SaaS Solutions</h3>
               <p className="text-white/70 leading-relaxed mb-4">
@@ -255,7 +260,7 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <div className="group bg-[#131929] p-8 rounded-xl border border-white/10 hover:border-[#667eea] transition-all hover:transform hover:-translate-y-1">
+            <div className="group bg-[#020202] p-8 rounded-xl border border-white/10 hover:border-[#667eea] transition-all hover:transform hover:-translate-y-1">
               <div className="text-4xl mb-4">🔗</div>
               <h3 className="text-2xl font-bold text-white mb-4">SOA Architecture</h3>
               <p className="text-white/70 leading-relaxed mb-4">
@@ -283,7 +288,7 @@ export default function HomePage() {
       </section>
 
       {/* Global Footprint Section - Image with Text */}
-      <section className="py-20 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
+      <section className="py-20 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: '#131929' }}>
         <div className="max-w-[1200px] mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
@@ -330,6 +335,9 @@ export default function HomePage() {
       </div>
       </section>
 
+      {/* Reviews Slider */}
+      <ReviewsSlider />
+
       {/* FAQ Section */}
       <section className="py-20 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight-95)' }}>
         <div className="max-w-[1200px] mx-auto">
@@ -374,7 +382,7 @@ export default function HomePage() {
                 return (
                   <div
                     key={index}
-                    className="bg-[#131929] rounded-xl border border-white/10 overflow-hidden transition-all duration-300"
+                    className="bg-[#020202] rounded-xl border border-white/10 overflow-hidden transition-all duration-300"
                   >
                     <button
                       onClick={() => setOpenFaqIndex(isOpen ? null : index)}
@@ -425,7 +433,7 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-20 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
         <div className="max-w-[1200px] mx-auto">
-          <div className="bg-gradient-to-r from-[#667eea] to-[#764ba2] rounded-2xl p-4 md:p-16 text-center">
+          <div className="bg-gradient-to-r from-[#191D23] to-[#020202] rounded-2xl p-4 md:p-16 text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Start Your Project?
             </h2>

@@ -35,7 +35,7 @@ export default function ContactPage() {
       {/* Page Header */}
       <section className="pt-32 pb-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
         <div className="max-w-[1200px] mx-auto text-center">
-          <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color, #667eea)' }}>
+          <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color, #0A9548)' }}>
             Get In Touch
           </span>
           <h1 className="text-5xl md:text-6xl font-bold text-white mt-4 mb-6">
@@ -54,7 +54,7 @@ export default function ContactPage() {
           <div className="md:col-span-2 space-y-6">
             {contactInfo.map((info, index) => (
               <div key={index} className="bg-[#1e293b] p-6 rounded-2xl border border-white/5 flex items-center gap-5">
-                <div className="w-14 h-14 rounded-xl flex items-center justify-center bg-gradient-to-br from-[#667eea] to-[#764ba2] flex-shrink-0">
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center bg-gradient-to-br from-[#0A9548] to-[#16DB65] flex-shrink-0">
                   {info.icon}
                 </div>
                 <div className="flex-1">
@@ -74,7 +74,7 @@ export default function ContactPage() {
                   <a
                     key={index}
                     href={social.url}
-                    className="w-12 h-12 rounded-xl bg-[#667eea]/20 hover:bg-[#667eea] flex items-center justify-center transition-all hover:scale-110"
+                    className="w-12 h-12 rounded-xl bg-[#0A9548]/20 hover:bg-[#0A9548] flex items-center justify-center transition-all hover:scale-110"
                     aria-label={social.name}
                   >
                     {social.icon}
@@ -98,7 +98,7 @@ export default function ContactPage() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#667eea] focus:outline-none"
+                    className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#0A9548] focus:outline-none"
                     placeholder="John Doe"
                   />
                 </div>
@@ -113,7 +113,7 @@ export default function ContactPage() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#667eea] focus:outline-none"
+                    className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#0A9548] focus:outline-none"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -127,7 +127,7 @@ export default function ContactPage() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#667eea] focus:outline-none"
+                    className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#0A9548] focus:outline-none"
                     placeholder="+1 (555) 000-0000"
                   />
                 </div>
@@ -141,7 +141,7 @@ export default function ContactPage() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#667eea] focus:outline-none"
+                    className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#0A9548] focus:outline-none"
                     placeholder="Your Company"
                   />
                 </div>
@@ -154,7 +154,7 @@ export default function ContactPage() {
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#667eea] focus:outline-none"
+                    className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#0A9548] focus:outline-none"
                   >
                     <option value="">Select a service</option>
                     <option value="web">Web Development</option>
@@ -176,7 +176,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#667eea] focus:outline-none resize-none"
+                    className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#0A9548] focus:outline-none resize-none"
                     placeholder="Tell us about your project..."
                   />
                 </div>
@@ -184,7 +184,7 @@ export default function ContactPage() {
                 <div className="md:col-span-2">
                   <button
                     type="submit"
-                    className="w-full px-8 py-3 bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white rounded-full font-semibold hover:opacity-90 transition-opacity"
+                    className="w-full px-8 py-3 bg-gradient-to-r from-[#0A9548] to-[#16DB65] text-white rounded-full font-semibold hover:opacity-90 transition-opacity"
                   >
                     Send Message
                   </button>
