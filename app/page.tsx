@@ -443,7 +443,7 @@ export default function HomePage() {
             <div className="flex gap-4 justify-center flex-wrap">
               <Link
                 href="/contact"
-                className="px-8 py-4 bg-white text-[#667eea] rounded-full font-semibold text-lg hover:bg-white/90 transition-colors"
+                className="px-8 py-4 bg-white text-[#020202] rounded-full font-semibold text-lg hover:bg-white/90 transition-colors"
               >
                 Get Started Today
               </Link>
