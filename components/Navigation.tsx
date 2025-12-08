@@ -396,7 +396,7 @@ const MobileNav: React.FC = () => {
           <Link href="/" aria-current="page" className="inline-flex items-center" aria-label="home">
             <img
               loading="lazy"
-              src="/images/LOGO_LOCKUP_WHITE.svg"
+              src="/images/logo.avif"
               alt="Trackstack"
               className="h-6 w-auto"
             />
@@ -790,7 +790,7 @@ const DesktopNav: React.FC<{ onMegaMenuOpenChange?: (open: boolean) => void; meg
       <div>
         <Link href="/" aria-current="page" className="inline-flex items-center" aria-label="home">
           <img
-            src="/images/LOGO_LOCKUP_WHITE.svg"
+            src="/images/logo.avif"
             loading="lazy"
             alt="Stafona"
             className="w-[150px] h-[24px]"

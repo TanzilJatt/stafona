@@ -13,7 +13,7 @@ export default function TeamPage() {
       {/* Page Header */}
       <section className="pt-32 pb-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
         <div className="max-w-[1200px] mx-auto text-center">
-          <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color, #0A9548)' }}>
+          <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color, #667eea)' }}>
             Meet The Team
           </span>
           <h1 className="text-5xl md:text-6xl font-bold text-white mt-4 mb-6">
@@ -32,7 +32,7 @@ export default function TeamPage() {
             {teams.map((team, index) => (
               <div
                 key={index}
-                className="bg-[#020202] p-8 rounded-xl border border-white/10 hover:border-[#0A9548] transition-all hover:transform hover:-translate-y-2 text-center"
+                className="bg-[#020202] p-8 rounded-xl border border-white/10 hover:border-[#667eea] transition-all hover:transform hover:-translate-y-2 text-center"
               >
                 <div
                   className="w-32 h-32 mx-auto mb-6 rounded-full flex items-center justify-center"
@@ -41,7 +41,7 @@ export default function TeamPage() {
                   {team.icon}
                 </div>
                 <h2 className="text-2xl font-bold text-white mb-2">{team.name}</h2>
-                <p className="text-[#0A9548] font-semibold mb-4">{team.role}</p>
+                <p className="text-[#667eea] font-semibold mb-4">{team.role}</p>
                 <p className="text-white/70 leading-relaxed">{team.description}</p>
               </div>
             ))}
@@ -52,7 +52,7 @@ export default function TeamPage() {
       {/* CTA Section */}
       <section className="py-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
         <div className="max-w-[1200px] mx-auto">
-          <div className="bg-gradient-to-r from-[#0A9548] to-[#16DB65] rounded-2xl p-12 text-center">
+          <div className="bg-gradient-to-r from-[#020202] to-[#131929] rounded-2xl p-12 text-center">
             <h2 className="text-4xl font-bold text-white mb-4">Want to Join Our Team?</h2>
             <p className="text-white/90 text-lg mb-8">
               We're always looking for talented professionals to join our growing family
@@ -60,13 +60,13 @@ export default function TeamPage() {
             <div className="flex gap-4 justify-center flex-wrap">
               <a
                 href="/careers"
-                className="px-8 py-3 bg-white text-[#0A9548] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                className="px-8 py-3 bg-white text-[#020202] rounded-full font-semibold hover:bg-white/90 transition-colors"
               >
                 View Open Positions
               </a>
               <a
                 href="/contact"
-                className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-[#0A9548] transition-colors"
+                className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-[#667eea] transition-colors"
               >
                 Get In Touch
               </a>
@@ -83,7 +83,7 @@ const teams = [
     icon: <CodeIcon sx={{ fontSize: 50, color: 'white' }} />,
     name: "Development Team",
     role: "Full-Stack Developers",
-    gradient: "linear-gradient(135deg, #0A9548 0%, #16DB65 100%)",
+    gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
     description: "Expert developers proficient in modern frameworks and best coding practices. Our team builds scalable, maintainable applications."
   },
   {

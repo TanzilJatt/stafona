@@ -194,7 +194,7 @@ export const products: Record<string, Product> = {
         aboutFeatures: [
             {
                 icon: "/images/products/icons/create.svg",
-                iconColor: "#A260FF",
+                iconColor: "#667eea",
                 title: "All-in-One creator hub",
                 description: "Manage your community, sell products, and track performance—all from one platform. No need for third-party tools or scattered workflows.",
             },
@@ -213,7 +213,7 @@ export const products: Record<string, Product> = {
         ],
         prosAndCons: {
             title: "All in one",
-            titleColor: "#A260FF",
+            titleColor: "#667eea",
             subTitle: "One platform for your entire community.",
             before: {
                 title: "Before Studio",
@@ -294,7 +294,7 @@ export const products: Record<string, Product> = {
             gradientRight: "#3A1869",
             downloadLink: "/images/products/download/studio.png",
             pricingLink: "/images/products/download/studio.png",
-            downloadBtnColor: "#A260FF",
+            downloadBtnColor: "#667eea",
         },
     },
     elevate: {

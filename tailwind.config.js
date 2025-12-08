@@ -18,7 +18,7 @@ const trackstackColors = {
   brightBlue: "#83A0FB",
   darkBlue: "#1E196A",
 
-  brightPurple: "#A260FF",
+  brightPurple: "#667eea",
   midPurple: "#6D00D2",
   darkPurple: "#610091",
 

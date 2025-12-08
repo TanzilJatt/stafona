@@ -6,7 +6,7 @@ export default function CareersPage() {
       {/* Page Header */}
       <section className="pt-32 pb-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
         <div className="max-w-[1200px] mx-auto text-center">
-          <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color, #0A9548)' }}>
+          <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color, #667eea)' }}>
             Join Our Team
           </span>
           <h1 className="text-5xl md:text-6xl font-bold text-white mt-4 mb-6">
@@ -22,7 +22,7 @@ export default function CareersPage() {
       <section className="py-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight-95)' }}>
         <div className="max-w-[1200px] mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color, #0A9548)' }}>
+            <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color, #667eea)' }}>
               Why Stafona?
             </span>
             <h2 className="text-4xl font-bold text-white mt-4 mb-6">Why Work With Us</h2>
@@ -33,7 +33,7 @@ export default function CareersPage() {
             <div className="grid grid-cols-2 gap-4">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center gap-2">
-                  <span className="text-[#0A9548] text-xl">✓</span>
+                  <span className="text-[#667eea] text-xl">✓</span>
                   <span className="text-white/70 text-sm">{benefit}</span>
                 </div>
               ))}
@@ -46,7 +46,7 @@ export default function CareersPage() {
                 alt="Professional team working together at Stafona"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0A9548]/60 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#667eea]/50 to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                 <h3 className="text-2xl font-bold">Join Our Team</h3>
                 <p className="text-white/90">Build your career with us</p>
@@ -60,7 +60,7 @@ export default function CareersPage() {
       <section className="py-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-12">
-            <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color, #0A9548)' }}>
+            <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color, #667eea)' }}>
               Current Openings
             </span>
             <h2 className="text-4xl font-bold text-white mt-4">Open Positions</h2>
@@ -69,7 +69,7 @@ export default function CareersPage() {
           {/* No Positions Available Message */}
           <div className="max-w-[800px] mx-auto">
             <div className="bg-[#1e293b] p-12 rounded-2xl border border-white/5 text-center">
-              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-[#0A9548]/20 flex items-center justify-center">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-[#667eea]/20 flex items-center justify-center">
                 <span className="text-4xl">💼</span>
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">No Positions Available</h3>
@@ -78,7 +78,7 @@ export default function CareersPage() {
               </p>
               <p className="text-white/60 text-base">
                 Interested in joining our team? Feel free to send us your resume at{' '}
-                <a href="mailto:careers@stafona.com" className="text-[#0A9548] hover:text-[#16DB65] transition-colors">
+                <a href="mailto:careers@stafona.com" className="text-[#667eea] hover:text-[#764ba2] transition-colors">
                   careers@stafona.com
                 </a>
               </p>
@@ -88,23 +88,23 @@ export default function CareersPage() {
           {/* Commented out job listings
           <div className="grid md:grid-cols-2 gap-6">
             {positions.map((position, index) => (
-              <div key={index} className="bg-[#020202] p-6 rounded-xl border border-white/10 hover:border-[#0A9548] transition-all">
+              <div key={index} className="bg-[#020202] p-6 rounded-xl border border-white/10 hover:border-[#667eea] transition-all">
                 <h3 className="text-2xl font-bold text-white mb-3">{position.title}</h3>
                 <div className="flex gap-2 mb-4 flex-wrap">
-                  <span className="px-3 py-1 bg-[#0A9548]/20 text-[#0A9548] text-xs font-semibold rounded-full">
+                  <span className="px-3 py-1 bg-[#667eea]/20 text-[#667eea] text-xs font-semibold rounded-full">
                     {position.type}
                   </span>
-                  <span className="px-3 py-1 bg-[#0A9548]/20 text-[#0A9548] text-xs font-semibold rounded-full">
+                  <span className="px-3 py-1 bg-[#667eea]/20 text-[#667eea] text-xs font-semibold rounded-full">
                     {position.location}
                   </span>
-                  <span className="px-3 py-1 bg-[#0A9548]/20 text-[#0A9548] text-xs font-semibold rounded-full">
+                  <span className="px-3 py-1 bg-[#667eea]/20 text-[#667eea] text-xs font-semibold rounded-full">
                     {position.salary}
                   </span>
                 </div>
                 <p className="text-white/70 mb-6 leading-relaxed">{position.description}</p>
                 <a
                   href={`/careers/apply?position=${encodeURIComponent(position.title)}`}
-                  className="inline-block px-6 py-2 bg-gradient-to-r from-[#0A9548] to-[#16DB65] text-white rounded-full font-semibold hover:opacity-90 transition-opacity"
+                  className="inline-block px-6 py-2 bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white rounded-full font-semibold hover:opacity-90 transition-opacity"
                 >
                   Apply Now
                 </a>
@@ -116,9 +116,9 @@ export default function CareersPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight-95)' }}>
+      <section className="py-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
         <div className="max-w-[1200px] mx-auto">
-          <div className="bg-gradient-to-r from-[#0A9548] to-[#16DB65] rounded-2xl p-12 text-center">
+          <div className="bg-gradient-to-r from-[#020202] to-[#131929] rounded-2xl p-12 text-center">
             <h2 className="text-4xl font-bold text-white mb-4">Don't See Your Role?</h2>
             <p className="text-white/90 text-lg mb-8">
               Send us your resume and we'll keep you in mind for future opportunities
@@ -126,13 +126,13 @@ export default function CareersPage() {
             <div className="flex gap-4 justify-center flex-wrap">
               <a
                 href="/contact"
-                className="px-8 py-3 bg-white text-[#0A9548] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                className="px-8 py-3 bg-white text-[#020202] rounded-full font-semibold hover:bg-white/90 transition-colors"
               >
                 Send Your Resume
               </a>
               <a
                 href="/about"
-                className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-[#0A9548] transition-colors"
+                className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-[#667eea] transition-colors"
               >
                 Learn More About Us
               </a>

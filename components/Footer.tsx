@@ -25,12 +25,9 @@ export default function Footer() {
             <div className="flex flex-row flex-wrap items-start gap-[5.1875em]">
               <Link href="/" className="inline-flex items-center flex-shrink-0">
                 <img
-                  src="/images/LOGO_MAIN.png"
+                  src="/images/logo.avif"
                   loading="lazy"
                   alt="Stafona"
-                  className="md:h-[7.75em] h-[6.25em] w-auto"
-                  width={140}
-                  height={124}
                 />
               </Link>
               <div className="text-white max-w-[19.6875em] md:pt-8 pt-6 text-base md:text-lg">

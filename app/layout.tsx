@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     "Stafona is a distinguished software development service provider with 15 years of experience. Expertise in Java, React JS, React Native, Node JS, and Python. Delivering quality solutions globally.",
   keywords: "software development, Java, React JS, React Native, Node JS, Python, web development, mobile apps, quality assurance, QA testing, e-commerce solutions, SaaS development",
   icons: {
-    icon: "/images/LOGO_MAIN.png",
-    shortcut: "/images/LOGO_MAIN.png",
-    apple: "/images/LOGO_MAIN.png",
+    icon: "/images/favicon.ico",
+    shortcut: "/images/favicon.ico",
+    apple: "/images/favicon.ico",
   },
 };
 

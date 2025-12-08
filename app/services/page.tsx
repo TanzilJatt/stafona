@@ -18,7 +18,7 @@ export default function ServicesPage() {
       {/* Page Header */}
       <section className="pt-32 pb-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
         <div className="max-w-[1200px] mx-auto text-center">
-          <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color, #0A9548)' }}>
+          <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color, #667eea)' }}>
             What We Offer
           </span>
           <h1 className="text-5xl md:text-6xl font-bold text-white mt-4 mb-6">
@@ -37,9 +37,9 @@ export default function ServicesPage() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-[#020202] p-8 rounded-xl border border-white/10 hover:border-[#0A9548] transition-all hover:transform hover:-translate-y-2"
+                className="bg-[#020202] p-8 rounded-xl border border-white/10 hover:border-[#667eea] transition-all hover:transform hover:-translate-y-2"
               >
-                <div className="w-16 h-16 mb-6 rounded-lg flex items-center justify-center bg-gradient-to-br from-[#0A9548] to-[#16DB65]">
+                <div className="w-16 h-16 mb-6 rounded-lg flex items-center justify-center bg-gradient-to-br from-[#667eea] to-[#764ba2]">
                   {service.icon}
                 </div>
                 <h2 className="text-2xl font-bold text-white mb-4">{service.title}</h2>
@@ -47,7 +47,7 @@ export default function ServicesPage() {
                 <ul className="space-y-2 border-t border-white/10 pt-6">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start text-sm text-white/60">
-                      <span className="text-[#0A9548] mr-2">✓</span>
+                      <span className="text-[#667eea] mr-2">✓</span>
                       {feature}
                     </li>
                   ))}
@@ -81,7 +81,7 @@ export default function ServicesPage() {
               </a>
               <a
                 href="/projects"
-                className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-[#0A9548] transition-colors"
+                className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-[#667eea] transition-colors"
               >
                 View Our Work
               </a>

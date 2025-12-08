@@ -24,7 +24,7 @@ export default function ProjectsPage() {
       {/* Page Header */}
       <section className="pt-32 pb-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
         <div className="max-w-[1200px] mx-auto text-center">
-          <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color, #0A9548)' }}>
+          <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color, #667eea)' }}>
             Our Work
           </span>
           <h1 className="text-5xl md:text-6xl font-bold text-white mt-4 mb-6">
@@ -46,7 +46,7 @@ export default function ProjectsPage() {
                 onClick={() => setActiveFilter(filter.value)}
                 className={`px-6 py-2 rounded-full text-sm font-semibold transition-all ${
                   activeFilter === filter.value
-                    ? "bg-gradient-to-r from-[#0A9548] to-[#16DB65] text-white"
+                    ? "bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white"
                     : "bg-[#020202] text-white/70 hover:text-white border border-white/10"
                 }`}
               >
@@ -65,16 +65,16 @@ export default function ProjectsPage() {
               <a
                 key={index}
                 href={`/projects/${project.slug}`}
-                className="bg-[#020202] rounded-xl overflow-hidden border border-white/10 hover:border-[#0A9548] transition-all hover:transform hover:-translate-y-2 group block"
+                className="bg-[#020202] rounded-xl overflow-hidden border border-white/10 hover:border-[#667eea] transition-all hover:transform hover:-translate-y-2 group block"
               >
-                <div className="relative h-48 bg-gradient-to-br from-[#0A9548] to-[#16DB65] flex items-center justify-center">
+                <div className="relative h-48 bg-gradient-to-br from-[#667eea] to-[#764ba2] flex items-center justify-center">
                   {project.icon}
                   <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <span className="text-white font-semibold">View Project</span>
                   </div>
                 </div>
                 <div className="p-6">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-[#0A9548]">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-[#667eea]">
                     {project.category}
                   </span>
                   <h2 className="text-xl font-bold text-white mt-2 mb-3">{project.title}</h2>
@@ -83,7 +83,7 @@ export default function ProjectsPage() {
                     {project.tech.map((tech, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 bg-[#0A9548]/20 text-[#0A9548] text-xs font-semibold rounded-full"
+                        className="px-3 py-1 bg-[#667eea]/20 text-[#667eea] text-xs font-semibold rounded-full"
                       >
                         {tech}
                       </span>
@@ -100,21 +100,21 @@ export default function ProjectsPage() {
       <ReviewsSlider />
 
       {/* CTA Section */}
-      <section className="py-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight-95)' }}>
+      <section className="py-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
         <div className="max-w-[1200px] mx-auto">
-          <div className="bg-gradient-to-r from-[#0A9548] to-[#16DB65] rounded-2xl p-12 text-center">
+          <div className="bg-gradient-to-r from-[#191D23] to-[#020202] rounded-2xl p-12 text-center">
             <h2 className="text-4xl font-bold text-white mb-4">Have a Project in Mind?</h2>
             <p className="text-white/90 text-lg mb-8">Let's bring your vision to life with our expertise</p>
             <div className="flex gap-4 justify-center flex-wrap">
               <a
                 href="/contact"
-                className="px-8 py-3 bg-white text-[#0A9548] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                className="px-8 py-3 bg-white text-[#667eea] rounded-full font-semibold hover:bg-white/90 transition-colors"
               >
                 Start Your Project
               </a>
               <a
                 href="/services"
-                className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-[#0A9548] transition-colors"
+                className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-[#667eea] transition-colors"
               >
                 View Services
               </a>

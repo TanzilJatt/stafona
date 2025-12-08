@@ -72,7 +72,7 @@ export default function HomePage() {
       <ClientsMarquee />
 
       {/* About Section - Image with Text */}
-      <section className="py-20 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: '#131929' }}>
+      <section className="py-20 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight-95)' }}>
         <div className="max-w-[1200px] mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -288,7 +288,7 @@ export default function HomePage() {
       </section>
 
       {/* Global Footprint Section - Image with Text */}
-      <section className="py-20 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: '#131929' }}>
+      <section className="py-20 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight-95)' }}>
         <div className="max-w-[1200px] mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
