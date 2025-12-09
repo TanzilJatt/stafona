@@ -18,9 +18,9 @@ export default function ProjectDetailPage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-12">
-            <span className="text-xs font-semibold uppercase tracking-wider px-4 py-2 bg-[#667eea]/20 text-[#667eea] rounded-full">
+            <span className="text-xs font-semibold uppercase tracking-wider px-4 py-2 bg-[#667eea]/20 text-[#667eea] rounded-[10px]">
               {project.category}
             </span>
             <h1 className="text-5xl md:text-6xl font-bold text-white mt-6 mb-6">
@@ -42,7 +42,7 @@ export default function ProjectDetailPage() {
 
       {/* Project Details */}
       <section className="py-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight-95)' }}>
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <div className="grid md:grid-cols-3 gap-12">
             {/* Sidebar */}
             <div className="md:col-span-1 space-y-8">
@@ -70,7 +70,7 @@ export default function ProjectDetailPage() {
                   {project.tech.map((tech, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 bg-[#667eea]/20 text-[#667eea] text-sm font-semibold rounded-full"
+                      className="px-3 py-1 bg-[#667eea]/20 text-[#667eea] text-sm font-semibold rounded-[10px]"
                     >
                       {tech}
                     </span>
@@ -128,7 +128,7 @@ export default function ProjectDetailPage() {
 
       {/* CTA Section */}
       <section className="py-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <div className="bg-gradient-to-r from-[#667eea] to-[#764ba2] rounded-2xl p-12 text-center">
             <h2 className="text-4xl font-bold text-white mb-4">Start Your Project</h2>
             <p className="text-white/90 text-lg mb-8">
@@ -137,13 +137,13 @@ export default function ProjectDetailPage() {
             <div className="flex gap-4 justify-center flex-wrap">
               <a
                 href="/contact"
-                className="px-8 py-3 bg-white text-[#667eea] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                className="px-8 py-3 bg-white text-[#667eea] rounded-[10px] font-semibold hover:bg-white/90 transition-colors"
               >
                 Contact Us
               </a>
               <a
                 href="/projects"
-                className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-[#667eea] transition-colors"
+                className="px-8 py-3 border-2 border-white text-white rounded-[10px] font-semibold hover:bg-white hover:text-[#667eea] transition-colors"
               >
                 View All Projects
               </a>

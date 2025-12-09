@@ -34,7 +34,7 @@ export default function ContactPage() {
     <div className="min-h-screen">
       {/* Page Header */}
       <section className="pt-32 pb-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
-        <div className="max-w-[1200px] mx-auto text-center">
+        <div className="max-w-[1400px] mx-auto text-center">
           <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color, #667eea)' }}>
             Get In Touch
           </span>
@@ -49,7 +49,7 @@ export default function ContactPage() {
 
       {/* Contact Content */}
       <section className="py-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight-95)' }}>
-        <div className="max-w-[1200px] mx-auto grid md:grid-cols-5 gap-8">
+        <div className="max-w-[1400px] mx-auto grid md:grid-cols-5 gap-8">
           {/* Contact Info */}
           <div className="md:col-span-2 space-y-6">
             {contactInfo.map((info, index) => (
@@ -184,7 +184,7 @@ export default function ContactPage() {
                 <div className="md:col-span-2">
                   <button
                     type="submit"
-                    className="w-full px-8 py-3 bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white rounded-full font-semibold hover:opacity-90 transition-opacity"
+                    className="w-full px-8 py-3 bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white rounded-[10px] font-semibold hover:opacity-90 transition-opacity"
                   >
                     Send Message
                   </button>

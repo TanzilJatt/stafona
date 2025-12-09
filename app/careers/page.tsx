@@ -5,7 +5,7 @@ export default function CareersPage() {
     <div className="min-h-screen">
       {/* Page Header */}
       <section className="pt-32 pb-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
-        <div className="max-w-[1200px] mx-auto text-center">
+        <div className="max-w-[1400px] mx-auto text-center">
           <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color, #667eea)' }}>
             Join Our Team
           </span>
@@ -20,7 +20,7 @@ export default function CareersPage() {
 
       {/* Why Work With Us - Image with Text */}
       <section className="py-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight-95)' }}>
-        <div className="max-w-[1200px] mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-[1400px] mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color, #667eea)' }}>
               Why Stafona?
@@ -58,7 +58,7 @@ export default function CareersPage() {
 
       {/* Open Positions */}
       <section className="py-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-12">
             <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color, #667eea)' }}>
               Current Openings
@@ -91,20 +91,20 @@ export default function CareersPage() {
               <div key={index} className="bg-[#020202] p-6 rounded-xl border border-white/10 hover:border-[#667eea] transition-all">
                 <h3 className="text-2xl font-bold text-white mb-3">{position.title}</h3>
                 <div className="flex gap-2 mb-4 flex-wrap">
-                  <span className="px-3 py-1 bg-[#667eea]/20 text-[#667eea] text-xs font-semibold rounded-full">
+                  <span className="px-3 py-1 bg-[#667eea]/20 text-[#667eea] text-xs font-semibold rounded-[10px]">
                     {position.type}
                   </span>
-                  <span className="px-3 py-1 bg-[#667eea]/20 text-[#667eea] text-xs font-semibold rounded-full">
+                  <span className="px-3 py-1 bg-[#667eea]/20 text-[#667eea] text-xs font-semibold rounded-[10px]">
                     {position.location}
                   </span>
-                  <span className="px-3 py-1 bg-[#667eea]/20 text-[#667eea] text-xs font-semibold rounded-full">
+                  <span className="px-3 py-1 bg-[#667eea]/20 text-[#667eea] text-xs font-semibold rounded-[10px]">
                     {position.salary}
                   </span>
                 </div>
                 <p className="text-white/70 mb-6 leading-relaxed">{position.description}</p>
                 <a
                   href={`/careers/apply?position=${encodeURIComponent(position.title)}`}
-                  className="inline-block px-6 py-2 bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white rounded-full font-semibold hover:opacity-90 transition-opacity"
+                  className="inline-block px-6 py-2 bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white rounded-[10px] font-semibold hover:opacity-90 transition-opacity"
                 >
                   Apply Now
                 </a>
@@ -117,7 +117,7 @@ export default function CareersPage() {
 
       {/* CTA Section */}
       <section className="py-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <div className="bg-gradient-to-r from-[#020202] to-[#131929] rounded-2xl p-12 text-center">
             <h2 className="text-4xl font-bold text-white mb-4">Don't See Your Role?</h2>
             <p className="text-white/90 text-lg mb-8">
@@ -126,13 +126,13 @@ export default function CareersPage() {
             <div className="flex gap-4 justify-center flex-wrap">
               <a
                 href="/contact"
-                className="px-8 py-3 bg-white text-[#020202] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                className="px-8 py-3 bg-white text-[#020202] rounded-[10px] font-semibold hover:bg-white/90 transition-colors"
               >
                 Send Your Resume
               </a>
               <a
                 href="/about"
-                className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-[#667eea] transition-colors"
+                className="px-8 py-3 border-2 border-white text-white rounded-[10px] font-semibold hover:bg-white hover:text-[#667eea] transition-colors"
               >
                 Learn More About Us
               </a>

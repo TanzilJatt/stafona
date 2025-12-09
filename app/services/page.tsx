@@ -17,7 +17,7 @@ export default function ServicesPage() {
     <div className="min-h-screen">
       {/* Page Header */}
       <section className="pt-32 pb-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
-        <div className="max-w-[1200px] mx-auto text-center">
+        <div className="max-w-[1400px] mx-auto text-center">
           <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color, #667eea)' }}>
             What We Offer
           </span>
@@ -32,7 +32,7 @@ export default function ServicesPage() {
 
       {/* Services Grid */}
       <section className="py-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight-95)' }}>
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div
@@ -66,7 +66,7 @@ export default function ServicesPage() {
 
       {/* CTA Section */}
       <section className="py-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <div className="bg-gradient-to-r from-[#020202] to-[#131929] rounded-2xl p-12 text-center">
             <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
             <p className="text-white/90 text-lg mb-8">
@@ -75,13 +75,13 @@ export default function ServicesPage() {
             <div className="flex gap-4 justify-center flex-wrap">
               <a
                 href="/contact"
-                className="px-8 py-3 bg-white text-[#000000] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                className="px-8 py-3 bg-white text-[#000000] rounded-[10px] font-semibold hover:bg-white/90 transition-colors"
               >
                 Get Started
               </a>
               <a
                 href="/projects"
-                className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-[#667eea] transition-colors"
+                className="px-8 py-3 border-2 border-white text-white rounded-[10px] font-semibold hover:bg-white hover:text-[#667eea] transition-colors"
               >
                 View Our Work
               </a>

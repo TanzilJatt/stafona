@@ -123,7 +123,7 @@ export default function FAQPage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
-        <div className="max-w-[1200px] mx-auto text-center">
+        <div className="max-w-[1400px] mx-auto text-center">
           <span className="text-sm font-semibold uppercase tracking-wider text-[#667eea]">
             Help Center
           </span>
@@ -190,7 +190,7 @@ export default function FAQPage() {
 
       {/* Still Have Questions CTA */}
       <section className="py-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <div className="bg-gradient-to-r from-[#667eea] to-[#764ba2] rounded-2xl p-12 text-center">
             <h2 className="text-4xl font-bold text-white mb-4">Still Have Questions?</h2>
             <p className="text-white/90 text-lg mb-8">
@@ -199,13 +199,13 @@ export default function FAQPage() {
             <div className="flex gap-4 justify-center flex-wrap">
               <Link
                 href="/contact"
-                className="px-8 py-3 bg-white text-[#667eea] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                className="px-8 py-3 bg-white text-[#667eea] rounded-[10px] font-semibold hover:bg-white/90 transition-colors"
               >
                 Contact Us
               </Link>
               <a
                 href="mailto:info@stafona.com"
-                className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-[#667eea] transition-colors"
+                className="px-8 py-3 border-2 border-white text-white rounded-[10px] font-semibold hover:bg-white hover:text-[#667eea] transition-colors"
               >
                 Email Us
               </a>

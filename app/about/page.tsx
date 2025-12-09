@@ -14,7 +14,7 @@ export default function AboutPage() {
     <div className="min-h-screen">
       {/* Page Header */}
       <section className="pt-32 pb-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
-        <div className="max-w-[1200px] mx-auto text-center">
+        <div className="max-w-[1400px] mx-auto text-center">
           <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color)' }}>
             About Stafona
           </span>
@@ -29,7 +29,7 @@ export default function AboutPage() {
 
       {/* Our Story - Image with Text */}
       <section className="py-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight-95)' }}>
-        <div className="max-w-[1200px] mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-[1400px] mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color)' }}>
               Our Story
@@ -64,7 +64,7 @@ export default function AboutPage() {
 
       {/* Stats */}
       <section className="py-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
@@ -81,7 +81,7 @@ export default function AboutPage() {
 
       {/* Mission & Vision */}
       <section className="py-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight-95)' }}>
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-12">
             <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color, #667eea)' }}>
               Our Purpose
@@ -117,7 +117,7 @@ export default function AboutPage() {
 
       {/* Core Values */}
       <section className="py-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-12">
             <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color, #667eea)' }}>
               What Drives Us
@@ -146,15 +146,15 @@ export default function AboutPage() {
 
       {/* CTA */}
       <section className="py-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <div className="bg-gradient-to-r from-[#020202] to-[#131929] rounded-2xl p-12 text-center">
             <h2 className="text-4xl font-bold text-white mb-4">Ready to Work Together?</h2>
             <p className="text-white/90 text-lg mb-8">Let's discuss how we can help transform your business</p>
             <div className="flex gap-4 justify-center flex-wrap">
-              <a href="/contact" className="px-8 py-3 bg-white text-[#667eea] rounded-full font-semibold hover:bg-white/90 transition-colors">
+              <a href="/contact" className="px-8 py-3 bg-white text-[#667eea] rounded-[10px] font-semibold hover:bg-white/90 transition-colors">
                 Get In Touch
               </a>
-              <a href="/careers" className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-[#667eea] transition-colors">
+              <a href="/careers" className="px-8 py-3 border-2 border-white text-white rounded-[10px] font-semibold hover:bg-white hover:text-[#667eea] transition-colors">
                 Join Our Team
               </a>
             </div>

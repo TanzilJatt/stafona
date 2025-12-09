@@ -4,43 +4,58 @@ import Link from "next/link";
 import { useState } from "react";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import SmartToyIcon from '@mui/icons-material/SmartToy';
+import ChatIcon from '@mui/icons-material/Chat';
+import LanguageIcon from '@mui/icons-material/Language';
+import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
+import SettingsIcon from '@mui/icons-material/Settings';
+import AutorenewIcon from '@mui/icons-material/Autorenew';
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import SchoolIcon from '@mui/icons-material/School';
+import FlightIcon from '@mui/icons-material/Flight';
+import TheatersIcon from '@mui/icons-material/Theaters';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
 import ReviewsSlider from "@/components/ReviewsSlider";
 import ClientsMarquee from "@/components/ClientsMarquee";
 
 export default function HomePage() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
+  const [expandedTeamMember, setExpandedTeamMember] = useState<number | null>(null);
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-[1.5625em] md:px-[3.5em] overflow-hidden" style={{ backgroundColor: 'var(--midnight)' }}>
+      <section className="relative pt-32 pb-20 px-[1.5625em] md:px-[3.5em] md:py-[13rem] overflow-hidden" style={{ backgroundColor: 'var(--midnight)' }}>
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-1/2 -right-1/4 w-96 h-96 bg-[#667eea] opacity-20 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-1/2 -left-1/4 w-96 h-96 bg-[#764ba2] opacity-20 rounded-full blur-3xl"></div>
         </div>
-        
-        <div className="max-w-[1200px] mx-auto relative z-10">
+
+        <div className="max-w-[1400px] mx-auto relative z-10">
           <div className="text-center mb-12">
             <span className="text-sm font-semibold uppercase tracking-wider text-[#667eea]">
-              15 Years of Excellence
+              10 Years of Excellence
             </span>
             <h1 className="text-5xl md:text-7xl font-bold text-white mt-4 mb-6 leading-tight">
               Welcome to <span className="bg-gradient-to-r from-[#667eea] to-[#764ba2] bg-clip-text text-transparent">Stafona</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed">
-              A distinguished software development service provider with expertise in <strong>Java, React JS, React Native, Node JS, and Python</strong>. From proprietary products to seamless outsourcing solutions.
+              Build Faster, Ship Smarter — AI-Powered Dev & QA for Modern Companies
             </p>
           </div>
 
           <div className="flex gap-4 justify-center flex-wrap mt-8">
             <Link
               href="/projects"
-              className="px-8 py-4 bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white rounded-full font-semibold text-lg hover:opacity-90 transition-opacity"
+              className="px-8 py-4 bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white rounded-[10px] font-semibold text-lg hover:opacity-90 transition-opacity"
             >
               View Our Work
             </Link>
             <Link
               href="/contact"
-              className="px-8 py-4 border-2 border-[#667eea] text-white rounded-full font-semibold text-lg hover:bg-[#667eea]/10 transition-colors"
+              className="px-8 py-4 border-2 border-[#667eea] text-white rounded-[10px] font-semibold text-lg hover:bg-[#667eea]/10 transition-colors"
             >
               Get In Touch
             </Link>
@@ -49,15 +64,15 @@ export default function HomePage() {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20">
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#667eea]">15+</div>
+              <div className="text-4xl md:text-5xl font-bold text-[#667eea]">10+</div>
               <div className="text-white/70 mt-2">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#667eea]">100+</div>
+              <div className="text-4xl md:text-5xl font-bold text-[#667eea]">50+</div>
               <div className="text-white/70 mt-2">Projects Delivered</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#667eea]">50+</div>
+              <div className="text-4xl md:text-5xl font-bold text-[#667eea]">30+</div>
               <div className="text-white/70 mt-2">Global Clients</div>
             </div>
             <div className="text-center">
@@ -73,7 +88,7 @@ export default function HomePage() {
 
       {/* About Section - Image with Text */}
       <section className="py-20 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight-95)' }}>
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <span className="text-sm font-semibold uppercase tracking-wider text-[#667eea]">
@@ -90,19 +105,19 @@ export default function HomePage() {
               </p>
               <Link
                 href="/about"
-                className="group inline-flex items-center px-6 py-3 bg-[#667eea]/10 hover:bg-[#667eea]/20 border-2 border-[#667eea] text-[#667eea] hover:text-white hover:bg-[#667eea] rounded-full font-semibold transition-all duration-300"
+                className="group inline-flex items-center px-6 py-3 bg-[#667eea]/10 hover:bg-[#667eea]/20 border-2 border-[#667eea] text-[#667eea] hover:text-white hover:bg-[#667eea] rounded-[10px] font-semibold transition-all duration-300"
               >
                 Learn More About Us
-                <ArrowForwardIcon 
-                  className="ml-2 transition-transform duration-300 group-hover:translate-x-1" 
+                <ArrowForwardIcon
+                  className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
                   sx={{ fontSize: 20 }}
                 />
               </Link>
             </div>
             <div className="relative order-first md:order-last">
               <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" 
+                <img
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80"
                   alt="Team collaboration and software development"
                   className="w-full h-full object-cover"
                 />
@@ -121,51 +136,82 @@ export default function HomePage() {
 
       {/* Quality Assurance Section */}
       <section className="py-20 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-16">
             <span className="text-sm font-semibold uppercase tracking-wider text-[#667eea]">
               Excellence in Testing
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
-              Quality Assurance Mastery
+              Our QA & Automation Services
             </h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
-              Our distinctive and contemporary Quality Assurance team ensures flawless product delivery
+              End-to-end quality assurance solutions designed to elevate your software.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-[#131929] p-8 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-colors">
-              <div className="w-16 h-16 bg-[#667eea]/20 rounded-full flex items-center justify-center mb-6">
-                <span className="text-3xl">🔍</span>
+              <div className="w-16 h-16 bg-gradient-to-br from-[#0891b2] to-[#14b8a6] rounded-2xl flex items-center justify-center mb-6">
+                <SmartToyIcon sx={{ fontSize: 28, color: 'white' }} />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Manual Testing</h3>
+              <h3 className="text-xl font-bold text-white mb-4">AI & LLM Testing</h3>
               <p className="text-white/70 leading-relaxed">
-                Comprehensive manual testing procedures to identify edge cases and ensure optimal user experience across all scenarios.
+                Specialized testing for AI models, including Large Language Models (LLMs) and RAG systems to ensure accuracy and reliability.
               </p>
             </div>
 
             <div className="bg-[#131929] p-8 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-colors">
-              <div className="w-16 h-16 bg-[#667eea]/20 rounded-full flex items-center justify-center mb-6">
-                <span className="text-3xl">⚙️</span>
+              <div className="w-16 h-16 bg-gradient-to-br from-[#10b981] to-[#059669] rounded-2xl flex items-center justify-center mb-6">
+                <ChatIcon sx={{ fontSize: 28, color: 'white' }} />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Automated Testing</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Chatbot Testing</h3>
               <p className="text-white/70 leading-relaxed">
-                Advanced automated testing frameworks that accelerate delivery while maintaining the highest quality standards.
+                End-to-end testing for conversational AI to guarantee seamless user interactions and performance.
               </p>
             </div>
 
             <div className="bg-[#131929] p-8 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-colors">
-              <div className="w-16 h-16 bg-[#667eea]/20 rounded-full flex items-center justify-center mb-6">
-                <span className="text-3xl">📋</span>
+              <div className="w-16 h-16 bg-gradient-to-br from-[#84cc16] to-[#65a30d] rounded-2xl flex items-center justify-center mb-6">
+                <LanguageIcon sx={{ fontSize: 28, color: 'white' }} />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Documentation</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Web App Testing</h3>
               <p className="text-white/70 leading-relaxed">
-                Creating comprehensive documentation and defining rigorous testing criteria for transparency and accountability.
+                Comprehensive testing for web applications, ensuring functionality, performance, and security across all browsers.
               </p>
             </div>
           </div>
 
+          <div className="grid md:grid-cols-3 gap-8 mt-8">
+            <div className="bg-[#131929] p-8 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-colors">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#eab308] to-[#ca8a04] rounded-2xl flex items-center justify-center mb-6">
+                <PhoneAndroidIcon sx={{ fontSize: 28, color: 'white' }} />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Mobile App Testing</h3>
+              <p className="text-white/70 leading-relaxed">
+                Rigorous testing for iOS and Android applications to ensure a flawless user experience on any device.
+              </p>
+            </div>
+
+            <div className="bg-[#131929] p-8 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-colors">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#f97316] to-[#ea580c] rounded-2xl flex items-center justify-center mb-6">
+                <SettingsIcon sx={{ fontSize: 28, color: 'white' }} />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Manual & Automated Testing</h3>
+              <p className="text-white/70 leading-relaxed">
+                Comprehensive functional, regression, and performance testing tailored to your software needs.
+              </p>
+            </div>
+
+            <div className="bg-[#131929] p-8 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-colors">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#fb923c] to-[#f97316] rounded-2xl flex items-center justify-center mb-6">
+                <AutorenewIcon sx={{ fontSize: 28, color: 'white' }} />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Business Automation</h3>
+              <p className="text-white/70 leading-relaxed">
+                Automate workflows with tools like n8n and AI to boost efficiency and reduce operational costs.
+              </p>
+            </div>
+          </div>
           <div className="mt-12 text-center">
             <p className="text-lg text-white/80 max-w-4xl mx-auto leading-relaxed">
               Our Quality engineers play a pivotal role in fixing issues promptly, collaborating seamlessly with a team of professionals to guarantee that the final products are not only <strong className="text-[#667eea]">safe and reliable</strong> but also <strong className="text-[#667eea]">surpass customer expectations</strong>.
@@ -176,7 +222,7 @@ export default function HomePage() {
 
       {/* Services Overview */}
       <section className="py-20 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight-95)' }}>
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-16">
             <span className="text-sm font-semibold uppercase tracking-wider text-[#667eea]">
               Our Expertise
@@ -189,112 +235,76 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="group bg-[#020202] p-8 rounded-xl border border-white/10 hover:border-[#667eea] transition-all hover:transform hover:-translate-y-1">
-              <div className="text-4xl mb-4">🌐</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Web 2.0</h3>
-              <p className="text-white/70 leading-relaxed mb-4">
-                Delivering cutting-edge solutions in web design, social networking, mash-ups, and user-generated content.
-              </p>
-              <Link href="/services" className="text-[#667eea] hover:text-[#764ba2] font-semibold inline-flex items-center">
-                Learn More
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
+          <div className="grid md:grid-cols-4 gap-6">
+            <div className="bg-[#131929] p-8 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-colors text-center">
+              <div className="flex justify-center mb-4">
+                <AccountBalanceIcon sx={{ fontSize: 48, color: '#667eea' }} />
+              </div>
+              <h3 className="text-xl font-bold text-white">FinTech</h3>
             </div>
 
-            <div className="group bg-[#020202] p-8 rounded-xl border border-white/10 hover:border-[#667eea] transition-all hover:transform hover:-translate-y-1">
-              <div className="text-4xl mb-4">🛒</div>
-              <h3 className="text-2xl font-bold text-white mb-4">E-Commerce</h3>
-              <p className="text-white/70 leading-relaxed mb-4">
-                Comprehensive solutions that cater to the diverse needs of online businesses and digital marketplaces.
-              </p>
-              <Link href="/services" className="text-[#667eea] hover:text-[#764ba2] font-semibold inline-flex items-center">
-                Learn More
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
+            <div className="bg-[#131929] p-8 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-colors text-center">
+              <div className="flex justify-center mb-4">
+                <FavoriteBorderIcon sx={{ fontSize: 48, color: '#667eea' }} />
+              </div>
+              <h3 className="text-xl font-bold text-white">Healthcare</h3>
             </div>
 
-            <div className="group bg-[#020202] p-8 rounded-xl border border-white/10 hover:border-[#667eea] transition-all hover:transform hover:-translate-y-1">
-              <div className="text-4xl mb-4">📝</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Content Management</h3>
-              <p className="text-white/70 leading-relaxed mb-4">
-                Versatile and user-friendly CMS platforms to streamline content creation, publishing, and management.
-              </p>
-              <Link href="/services" className="text-[#667eea] hover:text-[#764ba2] font-semibold inline-flex items-center">
-                Learn More
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
+            <div className="bg-[#131929] p-8 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-colors text-center">
+              <div className="flex justify-center mb-4">
+                <ShoppingCartIcon sx={{ fontSize: 48, color: '#667eea' }} />
+              </div>
+              <h3 className="text-xl font-bold text-white">E-commerce</h3>
             </div>
 
-            <div className="group bg-[#020202] p-8 rounded-xl border border-white/10 hover:border-[#667eea] transition-all hover:transform hover:-translate-y-1">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Business Automation</h3>
-              <p className="text-white/70 leading-relaxed mb-4">
-                Designing and implementing automated solutions to streamline and optimize business workflows.
-              </p>
-              <Link href="/services" className="text-[#667eea] hover:text-[#764ba2] font-semibold inline-flex items-center">
-                Learn More
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-
-            <div className="group bg-[#020202] p-8 rounded-xl border border-white/10 hover:border-[#667eea] transition-all hover:transform hover:-translate-y-1">
-              <div className="text-4xl mb-4">☁️</div>
-              <h3 className="text-2xl font-bold text-white mb-4">SaaS Solutions</h3>
-              <p className="text-white/70 leading-relaxed mb-4">
-                Innovative and scalable cloud-based solutions to meet the evolving needs of modern businesses.
-              </p>
-              <Link href="/services" className="text-[#667eea] hover:text-[#764ba2] font-semibold inline-flex items-center">
-                Learn More
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-
-            <div className="group bg-[#020202] p-8 rounded-xl border border-white/10 hover:border-[#667eea] transition-all hover:transform hover:-translate-y-1">
-              <div className="text-4xl mb-4">🔗</div>
-              <h3 className="text-2xl font-bold text-white mb-4">SOA Architecture</h3>
-              <p className="text-white/70 leading-relaxed mb-4">
-                Designing flexible, scalable, and interoperable systems using Service-Oriented Architecture principles.
-              </p>
-              <Link href="/services" className="text-[#667eea] hover:text-[#764ba2] font-semibold inline-flex items-center">
-                Learn More
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
+            <div className="bg-[#131929] p-8 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-colors text-center">
+              <div className="flex justify-center mb-4">
+                <SchoolIcon sx={{ fontSize: 48, color: '#667eea' }} />
+              </div>
+              <h3 className="text-xl font-bold text-white">EdTech</h3>
             </div>
           </div>
 
-          <div className="mt-12 text-center">
-            <Link
-              href="/services"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white rounded-full font-semibold text-lg hover:opacity-90 transition-opacity"
-            >
-              View All Services
-              <ArrowForwardIcon className="ml-2" sx={{ fontSize: 20 }} />
-            </Link>
+          <div className="grid md:grid-cols-4 gap-6 mt-6">
+            <div className="bg-[#131929] p-8 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-colors text-center">
+              <div className="flex justify-center mb-4">
+                <FlightIcon sx={{ fontSize: 48, color: '#667eea' }} />
+              </div>
+              <h3 className="text-xl font-bold text-white">Travel</h3>
+            </div>
+
+            <div className="bg-[#131929] p-8 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-colors text-center">
+              <div className="flex justify-center mb-4">
+                <TheatersIcon sx={{ fontSize: 48, color: '#667eea' }} />
+              </div>
+              <h3 className="text-xl font-bold text-white">Entertainment</h3>
+            </div>
+
+            <div className="bg-[#131929] p-8 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-colors text-center">
+              <div className="flex justify-center mb-4">
+                <SportsEsportsIcon sx={{ fontSize: 48, color: '#667eea' }} />
+              </div>
+              <h3 className="text-xl font-bold text-white">Gaming</h3>
+            </div>
+
+            <div className="bg-[#131929] p-8 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-colors text-center">
+              <div className="flex justify-center mb-4">
+                <DeveloperBoardIcon sx={{ fontSize: 48, color: '#667eea' }} />
+              </div>
+              <h3 className="text-xl font-bold text-white">SaaS</h3>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Global Footprint Section - Image with Text */}
       <section className="py-20 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight-95)' }}>
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80" 
+                <img
+                  src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80"
                   alt="Global technology network and worldwide presence"
                   className="w-full h-full object-cover"
                 />
@@ -322,25 +332,25 @@ export default function HomePage() {
               </p>
               <Link
                 href="/projects"
-                className="group inline-flex items-center px-6 py-3 bg-[#667eea]/10 hover:bg-[#667eea]/20 border-2 border-[#667eea] text-[#667eea] hover:text-white hover:bg-[#667eea] rounded-full font-semibold transition-all duration-300 text-lg"
+                className="group inline-flex items-center px-6 py-3 bg-[#667eea]/10 hover:bg-[#667eea]/20 border-2 border-[#667eea] text-[#667eea] hover:text-white hover:bg-[#667eea] rounded-[10px] font-semibold transition-all duration-300 text-lg"
               >
                 Explore Our Projects
-                <ArrowForwardIcon 
-                  className="ml-2 transition-transform duration-300 group-hover:translate-x-1" 
+                <ArrowForwardIcon
+                  className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
                   sx={{ fontSize: 20 }}
                 />
               </Link>
             </div>
-      </div>
-      </div>
+          </div>
+        </div>
       </section>
 
       {/* Reviews Slider */}
       <ReviewsSlider />
 
-      {/* FAQ Section */}
+      {/* FAQ Section
       <section className="py-20 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight-95)' }}>
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-16">
             <span className="text-sm font-semibold uppercase tracking-wider text-[#667eea]">
               Got Questions?
@@ -378,7 +388,7 @@ export default function HomePage() {
                 }
               ].map((faq, index) => {
                 const isOpen = openFaqIndex === index;
-                
+
                 return (
                   <div
                     key={index}
@@ -391,17 +401,15 @@ export default function HomePage() {
                       <span className="text-lg font-semibold text-white pr-4">
                         {faq.question}
                       </span>
-                      <ExpandMoreIcon 
-                        className={`flex-shrink-0 transition-transform duration-300 ${
-                          isOpen ? 'rotate-180' : ''
-                        }`}
+                      <ExpandMoreIcon
+                        className={`flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''
+                          }`}
                         sx={{ fontSize: 28, color: '#667eea' }}
                       />
                     </button>
-                    <div 
-                      className={`transition-all duration-300 ease-in-out ${
-                        isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                      }`}
+                    <div
+                      className={`transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                        }`}
                     >
                       <div className="px-5 pt-5 pb-5">
                         <p className="text-white/70 leading-relaxed">
@@ -417,14 +425,117 @@ export default function HomePage() {
             <div className="mt-8 text-center">
               <Link
                 href="/faq"
-                className="group inline-flex items-center px-6 py-3 bg-[#667eea]/10 hover:bg-[#667eea]/20 border-2 border-[#667eea] text-[#667eea] hover:text-white hover:bg-[#667eea] rounded-full font-semibold transition-all duration-300 text-lg"
+                className="group inline-flex items-center px-6 py-3 bg-[#667eea]/10 hover:bg-[#667eea]/20 border-2 border-[#667eea] text-[#667eea] hover:text-white hover:bg-[#667eea] rounded-[10px] font-semibold transition-all duration-300 text-lg"
               >
                 View All FAQs
-                <ArrowForwardIcon 
-                  className="ml-2 transition-transform duration-300 group-hover:translate-x-1" 
+                <ArrowForwardIcon
+                  className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
                   sx={{ fontSize: 20 }}
                 />
               </Link>
+            </div>
+          </div>
+        </div>
+      </section> */}
+
+      {/* Team Section */}
+      <section className="py-20 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight-95)' }}>
+        <div className="max-w-[1400px] mx-auto">
+          <div className="text-center mb-16">
+            <span className="text-sm font-semibold uppercase tracking-wider text-[#667eea]">
+              Our Team
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
+              Meet the Experts Behind Your Success
+            </h2>
+            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+              Our talented team of professionals dedicated to delivering excellence in every project
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="bg-[#131929] p-6 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-all hover:transform hover:-translate-y-2">
+              <div className="w-full aspect-square mb-6 overflow-hidden bg-gradient-to-br from-[#667eea] to-[#764ba2]">
+                <img
+                  src="/images/team/rohail.jpeg"
+                  alt="Rohail"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Rohail</h3>
+              <p className="text-[#667eea] font-semibold mb-4">Senior Automation Engineer</p>
+              <p className={`text-white/70 text-sm leading-relaxed ${expandedTeamMember === 0 ? '' : 'line-clamp-4'}`}>
+                Rohail specializes in delivering high-quality software by building robust automation frameworks using Playwright with the Page Object Model, along with advanced AI-driven testing through Claude Code, Playwright MCP, and Amazon's Nova Act. He brings 8+ years of experience in both manual and automation testing, combining scalable frameworks with strong CI/CD practices to reduce bugs and accelerate release cycles. Rohail translates complex business requirements into clear, testable workflows while collaborating closely with product and engineering teams. His focus remains on leveraging modern AI tools to expand test coverage, improve delivery speed, and ensure a seamless, reliable user experience.
+              </p>
+              <button
+                onClick={() => setExpandedTeamMember(expandedTeamMember === 0 ? null : 0)}
+                className="text-[#667eea] hover:text-[#764ba2] text-sm font-semibold mt-2"
+              >
+                {expandedTeamMember === 0 ? 'See Less' : 'See More +'}
+              </button>
+            </div>
+
+            <div className="bg-[#131929] p-6 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-all hover:transform hover:-translate-y-2">
+              <div className="w-full aspect-square mb-6 overflow-hidden bg-gradient-to-br from-[#667eea] to-[#764ba2]">
+                <img
+                  src="/images/team/member2.jpg"
+                  alt="Sarah Johnson"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Sarah Johnson</h3>
+              <p className="text-[#667eea] font-semibold mb-4">CTO</p>
+              <p className={`text-white/70 text-sm leading-relaxed ${expandedTeamMember === 1 ? '' : 'line-clamp-4'}`}>
+                Technical expert driving innovation and technological excellence
+              </p>
+              <button
+                onClick={() => setExpandedTeamMember(expandedTeamMember === 1 ? null : 1)}
+                className="text-[#667eea] hover:text-[#764ba2] text-sm font-semibold mt-2"
+              >
+                {expandedTeamMember === 1 ? 'See Less' : 'See More +'}
+              </button>
+            </div>
+
+            <div className="bg-[#131929] p-6 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-all hover:transform hover:-translate-y-2">
+              <div className="w-full aspect-square mb-6 overflow-hidden bg-gradient-to-br from-[#667eea] to-[#764ba2]">
+                <img
+                  src="/images/team/member3.jpg"
+                  alt="Michael Chen"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Michael Chen</h3>
+              <p className="text-[#667eea] font-semibold mb-4">Lead Designer</p>
+              <p className={`text-white/70 text-sm leading-relaxed ${expandedTeamMember === 2 ? '' : 'line-clamp-4'}`}>
+                Creative director crafting exceptional user experiences
+              </p>
+              <button
+                onClick={() => setExpandedTeamMember(expandedTeamMember === 2 ? null : 2)}
+                className="text-[#667eea] hover:text-[#764ba2] text-sm font-semibold mt-2"
+              >
+                {expandedTeamMember === 2 ? 'See Less' : 'See More +'}
+              </button>
+            </div>
+
+            <div className="bg-[#131929] p-6 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-all hover:transform hover:-translate-y-2">
+              <div className="w-full aspect-square mb-6 overflow-hidden bg-gradient-to-br from-[#667eea] to-[#764ba2]">
+                <img
+                  src="/images/team/member4.jpg"
+                  alt="Emily Davis"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Emily Davis</h3>
+              <p className="text-[#667eea] font-semibold mb-4">QA Lead</p>
+              <p className={`text-white/70 text-sm leading-relaxed ${expandedTeamMember === 3 ? '' : 'line-clamp-4'}`}>
+                Quality assurance specialist ensuring flawless delivery
+              </p>
+              <button
+                onClick={() => setExpandedTeamMember(expandedTeamMember === 3 ? null : 3)}
+                className="text-[#667eea] hover:text-[#764ba2] text-sm font-semibold mt-2"
+              >
+                {expandedTeamMember === 3 ? 'See Less' : 'See More +'}
+              </button>
             </div>
           </div>
         </div>
@@ -432,7 +543,7 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <section className="py-20 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <div className="bg-gradient-to-r from-[#191D23] to-[#020202] rounded-2xl p-4 md:p-16 text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Start Your Project?
@@ -443,13 +554,13 @@ export default function HomePage() {
             <div className="flex gap-4 justify-center flex-wrap">
               <Link
                 href="/contact"
-                className="px-8 py-4 bg-white text-[#020202] rounded-full font-semibold text-lg hover:bg-white/90 transition-colors"
+                className="px-8 py-4 bg-white text-[#020202] rounded-[10px] font-semibold text-lg hover:bg-white/90 transition-colors"
               >
                 Get Started Today
               </Link>
               <Link
                 href="/careers"
-                className="px-8 py-4 border-2 border-white text-white rounded-full font-semibold text-lg hover:bg-white hover:text-[#667eea] transition-colors"
+                className="px-8 py-4 border-2 border-white text-white rounded-[10px] font-semibold text-lg hover:bg-white hover:text-[#667eea] transition-colors"
               >
                 Join Our Team
               </Link>

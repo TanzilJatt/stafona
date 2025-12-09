@@ -12,7 +12,7 @@ export default function TeamPage() {
     <div className="min-h-screen">
       {/* Page Header */}
       <section className="pt-32 pb-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
-        <div className="max-w-[1200px] mx-auto text-center">
+        <div className="max-w-[1400px] mx-auto text-center">
           <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color, #667eea)' }}>
             Meet The Team
           </span>
@@ -27,7 +27,7 @@ export default function TeamPage() {
 
       {/* Teams Grid */}
       <section className="py-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight-95)' }}>
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teams.map((team, index) => (
               <div
@@ -51,7 +51,7 @@ export default function TeamPage() {
 
       {/* CTA Section */}
       <section className="py-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <div className="bg-gradient-to-r from-[#020202] to-[#131929] rounded-2xl p-12 text-center">
             <h2 className="text-4xl font-bold text-white mb-4">Want to Join Our Team?</h2>
             <p className="text-white/90 text-lg mb-8">
@@ -60,13 +60,13 @@ export default function TeamPage() {
             <div className="flex gap-4 justify-center flex-wrap">
               <a
                 href="/careers"
-                className="px-8 py-3 bg-white text-[#020202] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                className="px-8 py-3 bg-white text-[#020202] rounded-[10px] font-semibold hover:bg-white/90 transition-colors"
               >
                 View Open Positions
               </a>
               <a
                 href="/contact"
-                className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-[#667eea] transition-colors"
+                className="px-8 py-3 border-2 border-white text-white rounded-[10px] font-semibold hover:bg-white hover:text-[#667eea] transition-colors"
               >
                 Get In Touch
               </a>

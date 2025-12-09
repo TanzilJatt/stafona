@@ -8,18 +8,14 @@ interface Client {
 }
 
 const clients: Client[] = [
-  { name: "TechVentures", logo: "/images/clients/techventures.png" },
-  { name: "InnovateLabs", logo: "/images/clients/innovatelabs.png" },
-  { name: "GlobalRetail", logo: "/images/clients/globalretail.png" },
-  { name: "HealthTech Solutions", logo: "/images/clients/healthtech.png" },
-  { name: "FinanceFlow", logo: "/images/clients/financeflow.png" },
-  { name: "BrandBoost Agency", logo: "/images/clients/brandboost.png" },
-  { name: "DataDriven Inc.", logo: "/images/clients/datadriven.png" },
-  { name: "EduTech Pro", logo: "/images/clients/edutech.png" },
-  { name: "CloudNine Systems", logo: "/images/clients/cloudnine.png" },
-  { name: "NextGen AI", logo: "/images/clients/nextgenai.png" },
-  { name: "SecureNet Corp", logo: "/images/clients/securenet.png" },
-  { name: "GreenEnergy Plus", logo: "/images/clients/greenenergy.png" },
+  { name: "Skild", logo: "/images/client/skild.webp" },
+  { name: "Sugarwish", logo: "/images/client/sugarwish.svg" },
+  { name: "Mozaic", logo: "/images/client/mozaic.svg" },
+  { name: "SweetHome3D", logo: "/images/client/sweethome3d.png" },
+  { name: "Cyber Wolf", logo: "/images/client/cyberwolf.png" },
+  { name: "SigParser", logo: "/images/client/sigparser.png" },
+  { name: "TrackStack", logo: "/images/client/trackstack.svg" },
+  { name: "Azavista", logo: "/images/client/azavista.svg" },
 ];
 
 export default function ClientsMarquee() {
@@ -33,7 +29,7 @@ export default function ClientsMarquee() {
             Trusted Partners
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mt-4">
-            Companies We've Worked With
+            Clients We've Worked With
           </h2>
         </div>
       </div>

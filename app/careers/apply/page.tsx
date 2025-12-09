@@ -45,7 +45,7 @@ function ApplicationForm() {
     <div className="min-h-screen">
       {/* Page Header */}
       <section className="pt-32 pb-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight)' }}>
-        <div className="max-w-[1200px] mx-auto text-center">
+        <div className="max-w-[1400px] mx-auto text-center">
           <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--primary-color, #667eea)' }}>
             Join Our Team
           </span>
@@ -255,7 +255,7 @@ function ApplicationForm() {
                     onChange={handleFileChange}
                     accept=".pdf,.doc,.docx"
                     required
-                    className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#667eea] focus:outline-none file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#667eea] file:text-white hover:file:bg-[#5568d3]"
+                    className="w-full px-4 py-3 bg-[#0a0e27] border border-white/10 rounded-lg text-white focus:border-[#667eea] focus:outline-none file:mr-4 file:py-2 file:px-4 file:rounded-[10px] file:border-0 file:text-sm file:font-semibold file:bg-[#667eea] file:text-white hover:file:bg-[#5568d3]"
                   />
                   {formData.resume && (
                     <p className="mt-2 text-sm text-white/60">
@@ -269,7 +269,7 @@ function ApplicationForm() {
               <div className="pt-4">
                 <button
                   type="submit"
-                  className="w-full px-8 py-4 bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white rounded-full font-semibold text-lg hover:opacity-90 transition-opacity"
+                  className="w-full px-8 py-4 bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white rounded-[10px] font-semibold text-lg hover:opacity-90 transition-opacity"
                 >
                   Submit Application
                 </button>
