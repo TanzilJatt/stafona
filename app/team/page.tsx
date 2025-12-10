@@ -77,7 +77,6 @@ export default function TeamPage() {
     </div>
   );
 }
-
 const teams = [
   {
     icon: <CodeIcon sx={{ fontSize: 50, color: 'white' }} />,
@@ -122,4 +121,5 @@ const teams = [
     description: "Experienced managers ensuring projects deliver on time and budget. We coordinate teams and stakeholders for success."
   }
 ];
+
 

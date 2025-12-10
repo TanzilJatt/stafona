@@ -161,12 +161,12 @@ export default function HomePage() {
             </div>
 
             <div className="bg-[#131929] p-8 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-colors">
-              <div className="w-16 h-16 bg-gradient-to-br from-[#10b981] to-[#059669] rounded-2xl flex items-center justify-center mb-6">
-                <ChatIcon sx={{ fontSize: 28, color: 'white' }} />
+              <div className="w-16 h-16 bg-gradient-to-br from-[#fb923c] to-[#f97316] rounded-2xl flex items-center justify-center mb-6">
+                <AutorenewIcon sx={{ fontSize: 28, color: 'white' }} />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Chatbot Testing</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Business Automation</h3>
               <p className="text-white/70 leading-relaxed">
-                End-to-end testing for conversational AI to guarantee seamless user interactions and performance.
+                Automate workflows with tools like n8n and AI to boost efficiency and reduce operational costs.
               </p>
             </div>
 
@@ -201,16 +201,16 @@ export default function HomePage() {
                 Comprehensive functional, regression, and performance testing tailored to your software needs.
               </p>
             </div>
-
             <div className="bg-[#131929] p-8 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-colors">
-              <div className="w-16 h-16 bg-gradient-to-br from-[#fb923c] to-[#f97316] rounded-2xl flex items-center justify-center mb-6">
-                <AutorenewIcon sx={{ fontSize: 28, color: 'white' }} />
+              <div className="w-16 h-16 bg-gradient-to-br from-[#10b981] to-[#059669] rounded-2xl flex items-center justify-center mb-6">
+                <ChatIcon sx={{ fontSize: 28, color: 'white' }} />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Business Automation</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Chatbot Testing</h3>
               <p className="text-white/70 leading-relaxed">
-                Automate workflows with tools like n8n and AI to boost efficiency and reduce operational costs.
+                End-to-end testing for conversational AI to guarantee seamless user interactions and performance.
               </p>
             </div>
+
           </div>
           <div className="mt-12 text-center">
             <p className="text-lg text-white/80 max-w-4xl mx-auto leading-relaxed">
@@ -454,39 +454,21 @@ export default function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
-            <div className="bg-[#131929] p-6 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-all hover:transform hover:-translate-y-2">
-              <div className="w-full aspect-square mb-6 overflow-hidden bg-gradient-to-br from-[#667eea] to-[#764ba2]">
-                <img
-                  src="/images/team/rohail.jpeg"
-                  alt="Rohail"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Rohail</h3>
-              <p className="text-[#667eea] font-semibold mb-4">Senior Automation Engineer</p>
-              <p className={`text-white/70 text-sm leading-relaxed ${expandedTeamMember === 0 ? '' : 'line-clamp-4'}`}>
-                Rohail specializes in delivering high-quality software by building robust automation frameworks using Playwright with the Page Object Model, along with advanced AI-driven testing through Claude Code, Playwright MCP, and Amazon's Nova Act. He brings 8+ years of experience in both manual and automation testing, combining scalable frameworks with strong CI/CD practices to reduce bugs and accelerate release cycles. Rohail translates complex business requirements into clear, testable workflows while collaborating closely with product and engineering teams. His focus remains on leveraging modern AI tools to expand test coverage, improve delivery speed, and ensure a seamless, reliable user experience.
-              </p>
-              <button
-                onClick={() => setExpandedTeamMember(expandedTeamMember === 0 ? null : 0)}
-                className="text-[#667eea] hover:text-[#764ba2] text-sm font-semibold mt-2"
-              >
-                {expandedTeamMember === 0 ? 'See Less' : 'See More +'}
-              </button>
-            </div>
 
             <div className="bg-[#131929] p-6 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-all hover:transform hover:-translate-y-2">
-              <div className="w-full aspect-square mb-6 overflow-hidden bg-gradient-to-br from-[#667eea] to-[#764ba2]">
+              <div className="w-full aspect-square mb-6 rounded-md overflow-hidden bg-gradient-to-br from-[#667eea] to-[#764ba2]">
                 <img
-                  src="/images/team/member2.jpg"
-                  alt="Sarah Johnson"
+                  src="/images/team/ceo.png"
+                  alt="Talha Malik"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Sarah Johnson</h3>
-              <p className="text-[#667eea] font-semibold mb-4">CTO</p>
+              <h3 className="text-xl font-bold text-white mb-2">Talha Malik</h3>
+              <p className="text-[#667eea] font-semibold mb-4">CEO & Co-Founder</p>
               <p className={`text-white/70 text-sm leading-relaxed ${expandedTeamMember === 1 ? '' : 'line-clamp-4'}`}>
-                Technical expert driving innovation and technological excellence
+                I hold an MSc in Control Systems Engineering from the University of Sheffield and a B.E. in Avionics Engineering from NUST, and I am a Certified Professional Engineer (PEC). I spent seven years as a Navigation Systems Engineer at AERO, gaining deep technical expertise in complex systems.
+                As CEO, I leverage my engineering background and experience in project and team management to align technical teams with business goals and drive strategic growth.
+                Since 2009, we have served clients across the globe, consistently earning their trust and admiration—because while we may compromise on finances, we never compromise on the confidence clients place in us.
               </p>
               <button
                 onClick={() => setExpandedTeamMember(expandedTeamMember === 1 ? null : 1)}
@@ -497,7 +479,7 @@ export default function HomePage() {
             </div>
 
             <div className="bg-[#131929] p-6 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-all hover:transform hover:-translate-y-2">
-              <div className="w-full aspect-square mb-6 overflow-hidden bg-gradient-to-br from-[#667eea] to-[#764ba2]">
+              <div className="w-full aspect-square mb-6 rounded-md overflow-hidden bg-gradient-to-br from-[#667eea] to-[#764ba2]">
                 <img
                   src="/images/team/member3.jpg"
                   alt="Michael Chen"
@@ -518,7 +500,7 @@ export default function HomePage() {
             </div>
 
             <div className="bg-[#131929] p-6 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-all hover:transform hover:-translate-y-2">
-              <div className="w-full aspect-square mb-6 overflow-hidden bg-gradient-to-br from-[#667eea] to-[#764ba2]">
+              <div className="w-full aspect-square mb-6 rounded-md overflow-hidden bg-gradient-to-br from-[#667eea] to-[#764ba2]">
                 <img
                   src="/images/team/member4.jpg"
                   alt="Emily Davis"
@@ -535,6 +517,26 @@ export default function HomePage() {
                 className="text-[#667eea] hover:text-[#764ba2] text-sm font-semibold mt-2"
               >
                 {expandedTeamMember === 3 ? 'See Less' : 'See More +'}
+              </button>
+            </div>
+            <div className="bg-[#131929] p-6 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-all hover:transform hover:-translate-y-2">
+              <div className="w-full aspect-square mb-6 rounded-md overflow-hidden bg-gradient-to-br from-[#667eea] to-[#764ba2]">
+                <img
+                  src="/images/team/rohail.jpeg"
+                  alt="Rohail"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Rohail Shahid</h3>
+              <p className="text-[#667eea] font-semibold mb-4">Senior Automation Engineer</p>
+              <p className={`text-white/70 text-sm leading-relaxed ${expandedTeamMember === 0 ? '' : 'line-clamp-4'}`}>
+                Rohail specializes in delivering high-quality software by building robust automation frameworks using Playwright with the Page Object Model, along with advanced AI-driven testing through Claude Code, Playwright MCP, and Amazon's Nova Act. He brings 8+ years of experience in both manual and automation testing, combining scalable frameworks with strong CI/CD practices to reduce bugs and accelerate release cycles. Rohail translates complex business requirements into clear, testable workflows while collaborating closely with product and engineering teams. His focus remains on leveraging modern AI tools to expand test coverage, improve delivery speed, and ensure a seamless, reliable user experience.
+              </p>
+              <button
+                onClick={() => setExpandedTeamMember(expandedTeamMember === 0 ? null : 0)}
+                className="text-[#667eea] hover:text-[#764ba2] text-sm font-semibold mt-2"
+              >
+                {expandedTeamMember === 0 ? 'See Less' : 'See More +'}
               </button>
             </div>
           </div>

@@ -5,17 +5,18 @@ import { useEffect, useRef } from "react";
 interface Client {
   name: string;
   logo?: string;
+  invertImage?: boolean;
 }
 
 const clients: Client[] = [
-  { name: "Skild", logo: "/images/client/skild.webp" },
-  { name: "Sugarwish", logo: "/images/client/sugarwish.svg" },
-  { name: "Mozaic", logo: "/images/client/mozaic.svg" },
-  { name: "SweetHome3D", logo: "/images/client/sweethome3d.png" },
-  { name: "Cyber Wolf", logo: "/images/client/cyberwolf.png" },
-  { name: "SigParser", logo: "/images/client/sigparser.png" },
-  { name: "TrackStack", logo: "/images/client/trackstack.svg" },
-  { name: "Azavista", logo: "/images/client/azavista.svg" },
+  { name: "Skild", logo: "/images/client/skild.webp", invertImage: false },
+  { name: "Sugarwish", logo: "/images/client/sugarwish.svg", invertImage: false },
+  { name: "Mozaic", logo: "/images/client/mozaic.svg", invertImage: false },
+  { name: "SweetHome3D", logo: "/images/client/sweethome3d.png", invertImage: false },
+  { name: "Cyber Wolf", logo: "/images/client/cyberwolf.png", invertImage: false },
+  { name: "SigParser", logo: "/images/client/sigparser.png", invertImage: true },
+  { name: "TrackStack", logo: "/images/client/trackstack.svg", invertImage: true },
+  { name: "Azavista", logo: "/images/client/azavista.svg", invertImage: false },
 ];
 
 export default function ClientsMarquee() {
@@ -53,7 +54,7 @@ export default function ClientsMarquee() {
                     <img 
                       src={client.logo} 
                       alt={`${client.name} logo`}
-                      className="h-8 w-auto object-contain filter brightness-75 group-hover:brightness-100 transition-all"
+                      className={`h-8 w-auto object-contain filter brightness-75 group-hover:brightness-100 transition-all ${client.invertImage ? 'invert' : ''}`}
                       onError={(e) => {
                         // Fallback to text if image fails to load
                         const target = e.target as HTMLImageElement;
@@ -80,7 +81,7 @@ export default function ClientsMarquee() {
                     <img 
                       src={client.logo} 
                       alt={`${client.name} logo`}
-                      className="h-8 w-auto object-contain filter brightness-75 group-hover:brightness-100 transition-all"
+                      className={`h-8 w-auto object-contain filter brightness-75 group-hover:brightness-100 transition-all ${client.invertImage ? 'invert' : ''}`}
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         target.style.display = 'none';
@@ -110,7 +111,7 @@ export default function ClientsMarquee() {
                     <img 
                       src={client.logo} 
                       alt={`${client.name} logo`}
-                      className="h-8 w-auto object-contain filter brightness-75 group-hover:brightness-100 transition-all"
+                      className={`h-8 w-auto object-contain filter brightness-75 group-hover:brightness-100 transition-all ${client.invertImage ? 'invert' : ''}`}
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         target.style.display = 'none';
@@ -136,7 +137,7 @@ export default function ClientsMarquee() {
                     <img 
                       src={client.logo} 
                       alt={`${client.name} logo`}
-                      className="h-8 w-auto object-contain filter brightness-75 group-hover:brightness-100 transition-all"
+                      className={`h-8 w-auto object-contain filter brightness-75 group-hover:brightness-100 transition-all ${client.invertImage ? 'invert' : ''}`}
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         target.style.display = 'none';
