@@ -453,7 +453,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
 
             <div className="bg-[#131929] p-6 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-all hover:transform hover:-translate-y-2">
               <div className="w-full aspect-square mb-6 rounded-md overflow-hidden bg-gradient-to-br from-[#667eea] to-[#764ba2]">
@@ -478,6 +478,47 @@ export default function HomePage() {
               </button>
             </div>
 
+            <div className="bg-[#131929] p-6 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-all hover:transform hover:-translate-y-2">
+              <div className="w-full aspect-square mb-6 rounded-md overflow-hidden bg-gradient-to-br from-[#667eea] to-[#764ba2]">
+                <img
+                  src="/images/team/member3.jpg"
+                  alt="Michael Chen"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Michael Chen</h3>
+              <p className="text-[#667eea] font-semibold mb-4">Lead Designer</p>
+              <p className={`text-white/70 text-sm leading-relaxed ${expandedTeamMember === 2 ? '' : 'line-clamp-4'}`}>
+                Creative director crafting exceptional user experiences
+              </p>
+              <button
+                onClick={() => setExpandedTeamMember(expandedTeamMember === 2 ? null : 2)}
+                className="text-[#667eea] hover:text-[#764ba2] text-sm font-semibold mt-2"
+              >
+                {expandedTeamMember === 2 ? 'See Less' : 'See More +'}
+              </button>
+            </div>
+
+            <div className="bg-[#131929] p-6 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-all hover:transform hover:-translate-y-2">
+              <div className="w-full aspect-square mb-6 rounded-md overflow-hidden bg-gradient-to-br from-[#667eea] to-[#764ba2]">
+                <img
+                  src="/images/team/member4.jpg"
+                  alt="Emily Davis"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Emily Davis</h3>
+              <p className="text-[#667eea] font-semibold mb-4">QA Lead</p>
+              <p className={`text-white/70 text-sm leading-relaxed ${expandedTeamMember === 3 ? '' : 'line-clamp-4'}`}>
+                Quality assurance specialist ensuring flawless delivery
+              </p>
+              <button
+                onClick={() => setExpandedTeamMember(expandedTeamMember === 3 ? null : 3)}
+                className="text-[#667eea] hover:text-[#764ba2] text-sm font-semibold mt-2"
+              >
+                {expandedTeamMember === 3 ? 'See Less' : 'See More +'}
+              </button>
+            </div>
             <div className="bg-[#131929] p-6 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-all hover:transform hover:-translate-y-2">
               <div className="w-full aspect-square mb-6 rounded-md overflow-hidden bg-gradient-to-br from-[#667eea] to-[#764ba2]">
                 <img
