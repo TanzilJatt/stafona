@@ -1,13 +1,41 @@
 "use client";
 
-import CodeIcon from '@mui/icons-material/Code';
-import PaletteIcon from '@mui/icons-material/Palette';
-import SmartToyIcon from '@mui/icons-material/SmartToy';
-import SettingsIcon from '@mui/icons-material/Settings';
-import SearchIcon from '@mui/icons-material/Search';
-import BarChartIcon from '@mui/icons-material/BarChart';
+import { useState } from "react";
+
+const teamMembers = [
+  {
+    name: "Talha Malik",
+    role: "CEO & Co-Founder",
+    image: "/images/alpha/ceo.png",
+    invertImage: false,
+    bio: "I hold an MSc in Control Systems Engineering from the University of Sheffield and a B.E. in Avionics Engineering from NUST, and I am a Certified Professional Engineer (PEC). I spent seven years as a Navigation Systems Engineer at AERO, gaining deep technical expertise in complex systems. As CEO, I leverage my engineering background and experience in project and team management to align technical teams with business goals and drive strategic growth. Since 2009, we have served clients across the globe, consistently earning their trust and admiration—because while we may compromise on finances, we never compromise on the confidence clients place in us."
+  },
+  {
+    name: "Sarah Johnson",
+    role: "CTO",
+    image: "/images/alpha/member2.jpg",
+    invertImage: false,
+    bio: "Technical expert driving innovation and technological excellence with over 10 years of experience in software development and architecture."
+  },
+  {
+    name: "Michael Chen",
+    role: "Lead Designer",
+    image: "/images/alpha/michael.jpeg",
+    invertImage: false,
+    bio: "Creative director crafting exceptional user experiences and leading design initiatives that drive user engagement and satisfaction."
+  },
+  {
+    name: "Rohail Shahid",
+    role: "Senior Automation Engineer",
+    image: "/images/alpha/rohail.jpeg",
+    invertImage: false,
+    bio: "Rohail specializes in delivering high-quality software by building robust automation frameworks using Playwright with the Page Object Model, along with advanced AI-driven testing through Claude Code, Playwright MCP, and Amazon's Nova Act. He brings 8+ years of experience in both manual and automation testing, combining scalable frameworks with strong CI/CD practices to reduce bugs and accelerate release cycles. Rohail translates complex business requirements into clear, testable workflows while collaborating closely with product and engineering teams. His focus remains on leveraging modern AI tools to expand test coverage, improve delivery speed, and ensure a seamless, reliable user experience."
+  }
+];
 
 export default function TeamPage() {
+  const [expandedTeamMember, setExpandedTeamMember] = useState<number | null>(null);
+
   return (
     <div className="min-h-screen">
       {/* Page Header */}
@@ -17,32 +45,38 @@ export default function TeamPage() {
             Meet The Team
           </span>
           <h1 className="text-5xl md:text-6xl font-bold text-white mt-4 mb-6">
-            Our Expert Teams
+            Meet the Experts Behind Your Success
           </h1>
           <p className="text-xl text-white/70 max-w-3xl mx-auto">
-            Talented professionals dedicated to delivering excellence in every project
+            Our talented team of professionals dedicated to delivering excellence in every project
           </p>
         </div>
       </section>
 
-      {/* Teams Grid */}
+      {/* Team Members Grid */}
       <section className="py-16 px-[1.5625em] md:px-[3.5em]" style={{ backgroundColor: 'var(--midnight-95)' }}>
         <div className="max-w-[1400px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teams.map((team, index) => (
-              <div
-                key={index}
-                className="bg-[#020202] p-8 rounded-xl border border-white/10 hover:border-[#667eea] transition-all hover:transform hover:-translate-y-2 text-center"
-              >
-                <div
-                  className="w-32 h-32 mx-auto mb-6 rounded-full flex items-center justify-center"
-                  style={{ background: team.gradient }}
-                >
-                  {team.icon}
+          <div className="grid md:grid-cols-4 gap-8">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="bg-[#131929] p-6 rounded-xl border border-white/10 hover:border-[#667eea]/50 transition-all hover:transform hover:-translate-y-2">
+                <div className="w-full aspect-square mb-6 rounded-md overflow-hidden bg-gradient-to-br from-[#667eea] to-[#764ba2]">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className={`w-full h-full object-cover ${member.invertImage ? 'invert' : ''}`}
+                  />
                 </div>
-                <h2 className="text-2xl font-bold text-white mb-2">{team.name}</h2>
-                <p className="text-[#667eea] font-semibold mb-4">{team.role}</p>
-                <p className="text-white/70 leading-relaxed">{team.description}</p>
+                <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
+                <p className="text-[#667eea] font-semibold mb-4">{member.role}</p>
+                <p className={`text-white/70 text-sm leading-relaxed ${expandedTeamMember === index ? '' : 'line-clamp-4'}`}>
+                  {member.bio}
+                </p>
+                <button
+                  onClick={() => setExpandedTeamMember(expandedTeamMember === index ? null : index)}
+                  className="text-[#667eea] hover:text-[#764ba2] text-sm font-semibold mt-2"
+                >
+                  {expandedTeamMember === index ? 'See Less' : 'See More +'}
+                </button>
               </div>
             ))}
           </div>
@@ -77,49 +111,3 @@ export default function TeamPage() {
     </div>
   );
 }
-const teams = [
-  {
-    icon: <CodeIcon sx={{ fontSize: 50, color: 'white' }} />,
-    name: "Development Team",
-    role: "Full-Stack Developers",
-    gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-    description: "Expert developers proficient in modern frameworks and best coding practices. Our team builds scalable, maintainable applications."
-  },
-  {
-    icon: <PaletteIcon sx={{ fontSize: 50, color: 'white' }} />,
-    name: "Design Team",
-    role: "UI/UX Designers",
-    gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-    description: "Creative designers crafting beautiful and intuitive user experiences. We focus on user-centered design principles."
-  },
-  {
-    icon: <SmartToyIcon sx={{ fontSize: 50, color: 'white' }} />,
-    name: "AI/ML Team",
-    role: "Data Scientists",
-    gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
-    description: "Specialists in artificial intelligence and machine learning solutions. Our data scientists transform complex data into insights."
-  },
-  {
-    icon: <SettingsIcon sx={{ fontSize: 50, color: 'white' }} />,
-    name: "DevOps Team",
-    role: "Infrastructure Engineers",
-    gradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
-    description: "DevOps experts ensuring smooth deployment and system reliability. We automate processes and maintain robust infrastructure."
-  },
-  {
-    icon: <SearchIcon sx={{ fontSize: 50, color: 'white' }} />,
-    name: "QA Team",
-    role: "Quality Assurance",
-    gradient: "linear-gradient(135deg, #30cfd0 0%, #330867 100%)",
-    description: "Meticulous testers ensuring flawless product quality and performance. Our QA team guarantees every release meets standards."
-  },
-  {
-    icon: <BarChartIcon sx={{ fontSize: 50, color: 'white' }} />,
-    name: "Project Management",
-    role: "PMs & Scrum Masters",
-    gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
-    description: "Experienced managers ensuring projects deliver on time and budget. We coordinate teams and stakeholders for success."
-  }
-];
-
-
